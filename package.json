@@ -1,5 +1,5 @@
 {
-  "name" : "photos.joellesenne.dev",
+  "name": "photos.joellesenne.dev",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -30,7 +30,8 @@
   },
   "lint-staged": {
     "**/*.{js,jsx}": [
-      "eslint . --fix", "prettier --write ."
+      "eslint . --fix",
+      "prettier --write ."
     ]
   },
   "husky": {

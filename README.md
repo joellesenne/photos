@@ -21,7 +21,8 @@
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
 
 - [Prerequisites](#prerequisites)
 - [Install](#install)
@@ -53,7 +54,7 @@ git clone https://github.com/joellesenne/photos.joellesenne.dev.git
 # Open IDE
 cd photos.joellesenne.de && code .
 
-#Or 
+#Or
 webstorm .
 
 
@@ -87,11 +88,11 @@ Automatically Format your code on Git Commit [here](https://dev.to/ruppysuppy/au
 
 👤 **Joël Lesenne**
 
-* Website: https://joellesenne.dev
-* Twitter: [@joellesenne](https://twitter.com/joellesenne)
-* Github: [@joellesenne](https://github.com/joellesenne)
-* Codepen : [@joellesenne](https://codepen.io/joellesenne)
-* LinkedIn: [@joellesenne](https://linkedin.com/in/joellesenne)
+- Website: https://joellesenne.dev
+- Twitter: [@joellesenne](https://twitter.com/joellesenne)
+- Github: [@joellesenne](https://github.com/joellesenne)
+- Codepen : [@joellesenne](https://codepen.io/joellesenne)
+- LinkedIn: [@joellesenne](https://linkedin.com/in/joellesenne)
 
 ## 🤝 Contributing
 
@@ -109,5 +110,6 @@ Give a ⭐️ if this project helped you!
 
 Copyright © 2021 [Joël Lesenne](https://github.com/joellesenne). <br />This project is [MIT](https://github.com/joellesenne/photos.joellesenne.dev/blob/master/LICENSE) licensed.
 
-*** 
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
