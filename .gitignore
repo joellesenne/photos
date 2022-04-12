@@ -1,2 +1,5 @@
 # IDE
 .idea/
+
+# NODE
+node_modules

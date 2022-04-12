@@ -1,0 +1,41 @@
+{
+  "name" : "photos.joellesenne.dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joellesenne/photos.joellesenne.dev.git"
+  },
+  "author": "Joel Lesenne <contact@joellesenne.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joellesenne/photos.joellesenne.dev/issues"
+  },
+  "homepage": "https://github.com/joellesenne/photos.joellesenne.dev#readme",
+  "devDependencies": {
+    "@babel/core": "7.17.9",
+    "@babel/eslint-parser": "7.17.0",
+    "eslint": "8.13.0",
+    "husky": "7.0.4",
+    "lint-staged": "12.3.7",
+    "prettier": "2.6.2",
+    "vite": "2.9.1"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx}": [
+      "eslint . --fix", "prettier --write ."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
