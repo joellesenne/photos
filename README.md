@@ -108,7 +108,7 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2021 [Joël Lesenne](https://github.com/joellesenne). <br />This project is [MIT](https://github.com/joellesenne/photos.joellesenne.dev/blob/master/LICENSE) licensed.
+Copyright © 2022 [Joël Lesenne](https://github.com/joellesenne). <br />This project is [MIT](https://github.com/joellesenne/photos.joellesenne.dev/blob/master/LICENSE) licensed.
 
 ---
 
