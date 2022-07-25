@@ -5,7 +5,6 @@ specifiers:
   '@babel/eslint-parser': 7.18.9
   '@types/node': 17.0.25
   eslint: 8.20.0
-  husky: 7.0.4
   lint-staged: 13.0.3
   prettier: 2.6.2
   vite: 3.0.3
@@ -15,7 +14,6 @@ devDependencies:
   '@babel/eslint-parser': 7.18.9_@babel+core@7.18.9+eslint@8.20.0
   '@types/node': 17.0.25
   eslint: 8.20.0
-  husky: 7.0.4
   lint-staged: 13.0.3
   prettier: 2.6.2
   vite: 3.0.3
@@ -1025,12 +1023,6 @@ packages:
   /human-signals/3.0.1:
     resolution: {integrity: sha512-rQLskxnM/5OCldHo+wNXbpVgDn5A17CUoKX+7Sokwaknlq7CdSnphy0W39GU8dw59XiCXmFXDg4fRuckQRKewQ==}
     engines: {node: '>=12.20.0'}
-    dev: true
-
-  /husky/7.0.4:
-    resolution: {integrity: sha512-vbaCKN2QLtP/vD4yvs6iz6hBEo6wkSzs8HpRah1Z6aGmF2KW5PdYuAd7uX5a+OyBZHBhd+TFLqgjUgytQr4RvQ==}
-    engines: {node: '>=12'}
-    hasBin: true
     dev: true
 
   /ignore/5.2.0:
