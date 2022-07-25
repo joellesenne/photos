@@ -17,7 +17,7 @@
   </a>
 </p>
 
-> My gallery photos using vite.js
+> My gallery photos inspired by [Increpare](https://www.increpare.com/) and example code javaScript by [JavaScript tutorial](https://www.javascripttutorial.net/javascript-fetch-api/)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -52,10 +52,10 @@
 git clone https://github.com/joellesenne/photos.joellesenne.dev.git
 
 # Open IDE
-cd photos.joellesenne.de && code .
+cd photos.joellesenne.dev && code .
 
 #Or
-webstorm .
+cd photos.joellesenne.dev && webstorm .
 
 
 # Install with NPM

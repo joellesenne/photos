@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery Photos | Landscape</title>
+
+    <meta property="og:site_name" content="photos.joellesenne.dev" />
+    <meta
+            name="apple-mobile-web-app-title"
+            content="apple-mobile-web-app-title"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="../../public/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;700&family=Overpass+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+<main class="container">
+    <header class="header">
+        <h1>Gallery Photos | Landscape {beta}</h1>
+        <p>By <a
+                href="https://joellesenne.dev"
+                rel="noopener noreferrer"
+                target="_blank"
+        >Joël Lesenne</a
+        >
+        </p>
+    </header>
+    <article class="article">
+        <h2>A collection of photographs</h2>
+        <label for="selectCategory">Select category</label>
+        <select name="select" id="selectCategory" class="select" onchange="window.location.href = this.options[this.selectedIndex].value;">
+            <option value="/">All</option>
+            <option value="../city/">City</option>
+            <option value="../exhibition/">Exhibition</option>
+            <option selected="selected" value="../landscape/">Landscape</option>
+            <option value="../panorama/">Panorama</option>
+            <option value="../portrait/">Portrait</option>
+            <option value="../street-art/">Street Art</option>
+            <option value="../wildlife/">Wildlife</option>
+        </select>
+        <section id="getGalleryCatLandscape" class="gallery">
+            <p class="reload">Reload<span>.</span><span>.</span><span>.</span></p>
+        </section>
+    </article>
+    <footer class="footer">
+        <p>
+            Copyright © 2022
+            <a
+                    href="https://joellesenne.dev"
+                    rel="noopener noreferrer"
+                    target="_blank"
+            >Joël Lesenne</a
+            >
+        </p>
+    </footer>
+</main>
+<script>
+    window.onload = () => {
+        const consoleStyle = 'font-weight:bold;font-size:50px;line-height:2;background:hsl(256, 100%, 50%);color:hsl(33, 93%, 66%);font-family:monospace;';
+        console.log('%c Made by @joellesenne ', consoleStyle);
+
+        let getGalleryCatLandscape = document.querySelector('#getGalleryCatLandscape');
+
+        const getPhotos = async () => {
+            let url = '../../photos.json';
+            let res
+            try {
+                res = await fetch(url);
+                return await res.json();
+            } catch (e) {
+                console.log(e);
+            }
+        }
+
+        const renderPhotos = async () => {
+            let html = '';
+            let photos = await getPhotos()
+            let photosByCat = photos.filter(photo => photo.category === "Landscape" )
+            photosByCat.forEach((photo) => {
+
+                let htmlSegment = `<figure class="card">
+                            <img alt="${photo.src}"
+                            src="../../${photo.src}"
+                            loading="lazy"
+                            width="250"
+                            height="250">
+            <figcaption>${photo.title}<span class="category">${photo.category}</span></figcaption>
+          </figure>`;
+
+                return html += htmlSegment;
+            });
+
+            if (html) {
+                return getGalleryCatLandscape.innerHTML = html;
+            } else {
+                return getGalleryCatLandscape.innerHTML = `<p>No Photographs</p>`;
+            }
+        }
+
+        return renderPhotos()
+    }
+</script>
+</body>
+</html>

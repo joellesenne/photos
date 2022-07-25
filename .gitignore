@@ -1,6 +1,6 @@
 # IDE
 .idea/
-.run
+.run/
 
 # NODE
 node_modules
