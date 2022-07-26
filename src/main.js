@@ -1,6 +1,6 @@
-const consoleTitle = async () => {
+window.onload = () => {
     const consoleStyle = 'font-weight:bold;font-size:50px;line-height:2;background:hsl(256, 100%, 50%);color:hsl(33, 93%, 66%);font-family:monospace;';
-    await console.log('%c Made by @joellesenne ', consoleStyle);
+    console.log('%c Made by @joellesenne ', consoleStyle);
 
     let getGalleryAll = document.querySelector('#getGalleryAll');
 
@@ -13,7 +13,6 @@ const consoleTitle = async () => {
         } catch (e) {
             console.log(e);
         }
-        return consoleTitle()
     }
 
     const renderPhotos = async () => {
@@ -40,5 +39,7 @@ const consoleTitle = async () => {
         }
 
     }
-    return renderPhotos()
+
+    return  renderPhotos()
 }
+
