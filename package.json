@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "eslint:fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -32,10 +33,5 @@
       "eslint . --fix",
       "prettier --write ."
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }
