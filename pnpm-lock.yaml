@@ -7,7 +7,7 @@ specifiers:
   eslint: 8.30.0
   lint-staged: 13.1.0
   prettier: 2.8.1
-  vite: 4.0.2
+  vite: 4.0.4
 
 devDependencies:
   '@babel/core': 7.20.5
@@ -16,7 +16,7 @@ devDependencies:
   eslint: 8.30.0
   lint-staged: 13.1.0
   prettier: 2.8.1
-  vite: 4.0.2_@types+node@18.11.17
+  vite: 4.0.4_@types+node@18.11.17
 
 packages:
 
@@ -1721,8 +1721,8 @@ packages:
       punycode: 2.1.1
     dev: true
 
-  /vite/4.0.2_@types+node@18.11.17:
-    resolution: {integrity: sha512-QJaY3R+tFlTagH0exVqbgkkw45B+/bXVBzF2ZD1KB5Z8RiAoiKo60vSUf6/r4c2Vh9jfGBKM4oBI9b4/1ZJYng==}
+  /vite/4.0.4_@types+node@18.11.17:
+    resolution: {integrity: sha512-xevPU7M8FU0i/80DMR+YhgrzR5KS2ORy1B4xcX/cXLsvnUWvfHuqMmVU6N0YiJ4JWGRJJsLCgjEzKjG9/GKoSw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
