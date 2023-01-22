@@ -1,12 +1,12 @@
 {
   "name": "photos",
   "version": "1.0.0",
-  "description": "",
+  "description": "A collection of photographs",
   "main": "main.js",
   "scripts": {
-    "dev": "vite",
+    "start": "vite --host",
     "build": "vite build",
-    "preview": "vite preview",
+    "server": "vite preview",
     "eslint:fix": "eslint . --fix"
   },
   "repository": {
@@ -20,13 +20,13 @@
   },
   "homepage": "https://github.com/joellesenne/photos.joellesenne.dev#readme",
   "devDependencies": {
-    "@babel/core": "7.20.5",
+    "@babel/core": "7.20.12",
     "@babel/eslint-parser": "7.19.1",
-    "@types/node": "18.11.17",
-    "eslint": "8.30.0",
+    "@types/node": "18.11.18",
+    "eslint": "8.32.0",
     "lint-staged": "13.1.0",
-    "prettier": "2.8.1",
-    "vite": "4.0.2"
+    "prettier": "2.8.3",
+    "vite": "4.0.4"
   },
   "lint-staged": {
     "**/*.{js,jsx}": [
