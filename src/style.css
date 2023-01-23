@@ -1,7 +1,18 @@
 :root {
+  --bjColor: #cbc9e4;
   --theme-hue: 256;
   --theme-saturation: 100%;
   --theme-hs: var(--theme-hue), var(--theme-saturation);
+  --baseFont: calc(1em + (24 - 16) * ( (100vw - 400px) / (1600 - 400)));
+  --baseLine: 1.15;
+  --fontRegular: 400;
+  --fontBold: 700;
+}
+
+@media only screen and (min-width:1024px) {
+  :root {
+    --baseLine: 1.28
+  }
 }
 
 /* Simple Reset */
@@ -10,34 +21,18 @@
   display: revert;
 }
 
+* {
+  margin: 0;
+}
+
 *,
 *::after,
 *::before {
-  box-sizing: inherit;
-
-  scroll-behavior: smooth;
-}
-
-html {
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  font-size: 100%;
-
   box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::after,
-  *::before {
-    animation-duration: .01ms!important;
-    animation-iteration-count: 1!important;
-    transition-duration: .01ms!important;
-    scroll-behavior: auto!important;
-  }
-  html:focus-within {
-    scroll-behavior: auto;
-  }
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -46,17 +41,39 @@ html {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
 
-/* For width to not include padding and margin */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  box-sizing: inherit;
+
+  font-size: 62.5%;
+
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+
+html, body {
+  height: 100%;
+}
 
 body {
-  margin: 0;
-
   font-family: 'Overpass Mono', monospace;
-  font-weight: 400;
-  font-size: 1.5em;
-  line-height: 1.5;
-  text-rendering: optimizeSpeed;
+  font-size: var(--baseFont);
+  font-weight: var(--fontRegular);
+  line-height: var(--baseLine);
   color: hsl(var(--theme-hs), 35%);
 
   background-color: hsl(var(--theme-hs), 92%);
@@ -64,7 +81,7 @@ body {
 
 h1, h2 {
   font-family: 'Changa', sans-serif;
-  font-weight: 700;
+  font-weight: var(--fontBold);
 }
 h1 {
   font-size: calc(1em + 2vw);
@@ -86,13 +103,14 @@ img {
 
 
 select {
-  margin: 1vh 0 3vh;
+  margin-block-start: 1vh;
+  margin-block-end: 3vh;
 }
 
 .header,
 .article,
 .footer {
-  margin-top: 3vh;
+  margin-block-start: 3vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,11 +118,13 @@ select {
 }
 
 .header {
-  padding: 0 3vh;
+  padding-inline-end: 3vh;
 }
 
 .select {
-  padding: 1vh 1vh 0.5vh;
+  padding-block-start: 1vh;
+  padding-inline: 1vh;
+  padding-block-end: 0.5vh;
   border-radius: 3px;
   box-shadow: 0 0 0 1px #000;
 
@@ -116,12 +136,12 @@ select {
 }
 
 .gallery {
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: min(100% - 2rem, 80rem);
+  width: min(100% - 2rem, 150rem);
   min-height: 90vh;
-  margin: 0 auto;
 }
 
 @supports (margin-inline: auto) {
@@ -132,7 +152,8 @@ select {
 
 .reload {
   position: relative;
-  margin: 3vh;
+  margin-block: 3vh;
+  margin-inline: 3vh;
 
   font-size: calc(1em + 1vw);
 }
@@ -167,19 +188,25 @@ select {
   height: 390px;
   text-align: center;
 
-  overflow: visible;
   background-color: hsl(var(--theme-hs), 95%);
 }
 
 .card figcaption {
-  margin: 0 1vh 0;
+  margin: 20px 1vh 0;
 
 
   text-decoration: underline;
   font-size: 1em;
   line-height: 1;
 }
+.card .card-item {
+  margin: 0 auto;
 
+  width: 250px;
+  height: 250px;
+
+  overflow: hidden;
+}
 .card img {
   border: 1px solid #000;
 

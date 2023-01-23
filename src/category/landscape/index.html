@@ -80,15 +80,7 @@
             let photosByCat = photos.filter(photo => photo.category === "Landscape" )
             photosByCat.forEach((photo) => {
 
-                let htmlSegment = `<figure class="card">
-                            <img alt="${photo.src}"
-                            src="../../${photo.src}"
-                            loading="lazy"
-                            width="250"
-                            height="250">
-            <figcaption>${photo.title}<span class="category">${photo.category}</span></figcaption>
-          </figure>`;
-
+                let htmlSegment = `<figure class="card"><div class="card-item"> <img alt="${photo.src}" src="../../${photo.src}" loading="lazy" width="250" height="250"></div><figcaption>${photo.title}<span class="category">${photo.category}</span></figcaption></figure>`;
                 return html += htmlSegment;
             });
 

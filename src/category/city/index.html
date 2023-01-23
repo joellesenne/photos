@@ -11,7 +11,7 @@
             content="apple-mobile-web-app-title"
     />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="icon" href="../../public/favicon.ico" />
+    <link rel="icon" href="../../favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;700&family=Overpass+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../style.css" />
 </head>
@@ -80,15 +80,7 @@
             let photosByCat = photos.filter(photo => photo.category === "City" )
             photosByCat.forEach((photo) => {
 
-                let htmlSegment = `<figure class="card">
-                            <img alt="${photo.src}"
-                            src="../../${photo.src}"
-                            loading="lazy"
-                            width="250"
-                            height="250">
-            <figcaption>${photo.title}<span class="category">${photo.category}</span></figcaption>
-          </figure>`;
-
+                let htmlSegment = `<figure class="card"><div class="card-item"> <img alt="${photo.src}" src="../../${photo.src}" loading="lazy" width="250" height="250"></div><figcaption>${photo.title}<span class="category">${photo.category}</span></figcaption></figure>`;
                 return html += htmlSegment;
             });
 

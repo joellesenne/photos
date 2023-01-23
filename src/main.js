@@ -3,9 +3,9 @@ window.onload = () => {
     console.log('%c Made by @joellesenne ', consoleStyle);
 
     let getGalleryAll = document.querySelector('#getGalleryAll');
-
+    let url = 'photos.json';
     const getPhotos = async () => {
-        let url = 'photos.json';
+
         let res
         try {
             res = await fetch(url);
@@ -20,14 +20,7 @@ window.onload = () => {
         let photos = await getPhotos();
         photos.forEach((photo) => {
 
-            let htmlSegment = `<figure class="card">
-                            <img alt="${photo.src}"
-                            src="${photo.src}"
-                            loading="lazy"
-                            width="250"
-                            height="250">
-            <figcaption>${photo.title}<span class="category">${photo.category}</span></figcaption>
-          </figure>`;
+            let htmlSegment = `<figure class="card"><div class="card-item"><img alt="${photo.src}" src="${photo.src}" loading="lazy" width="250" height="250"></div><figcaption>${photo.title}<span class="category">${photo.category}</span></figcaption></figure>`;
 
             return html += htmlSegment;
         });
