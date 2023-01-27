@@ -4,7 +4,7 @@
   "description": "A collection of photographs",
   "main": "main.js",
   "scripts": {
-    "start": "vite --host",
+    "start": "vite",
     "build": "vite build",
     "server": "vite preview",
     "eslint:fix": "eslint . --fix"
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/joellesenne/photos.joellesenne.dev#readme",
   "devDependencies": {
-    "@babel/core": "7.20.12",
+    "@babel/core": "7.20.5",
     "@babel/eslint-parser": "7.19.1",
     "@types/node": "18.11.18",
     "eslint": "8.32.0",
