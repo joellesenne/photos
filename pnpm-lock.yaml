@@ -1,20 +1,20 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@babel/core': 7.20.12
+  '@babel/core': 7.20.5
   '@babel/eslint-parser': 7.19.1
   '@types/node': 18.11.18
   eslint: 8.32.0
-  lint-staged: 13.1.0
+  lint-staged: 13.1.2
   prettier: 2.8.3
   vite: 4.0.4
 
 devDependencies:
-  '@babel/core': 7.20.12
-  '@babel/eslint-parser': 7.19.1_2je5tsgpdnpnp4f5qs5fqust6m
+  '@babel/core': 7.20.5
+  '@babel/eslint-parser': 7.19.1_tcs2bzbqyjitqyk7rfi5mr2zcy
   '@types/node': 18.11.18
   eslint: 8.32.0
-  lint-staged: 13.1.0
+  lint-staged: 13.1.2
   prettier: 2.8.3
   vite: 4.0.4_@types+node@18.11.18
 
@@ -40,14 +40,14 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: true
 
-  /@babel/core/7.20.12:
-    resolution: {integrity: sha512-XsMfHovsUYHFMdrIHkZphTN/2Hzzi78R08NuHfDBehym2VsPDL6Zn/JAD/JQdnRvbSsbQc4mVaU1m6JgtTEElg==}
+  /@babel/core/7.20.5:
+    resolution: {integrity: sha512-UdOWmk4pNWTm/4DlPUl/Pt4Gz4rcEMb7CY0Y3eJl5Yz1vI8ZJGmHWaVE55LoxRjdpx0z259GE9U5STA9atUinQ==}
     engines: {node: '>=6.9.0'}
     dependencies:
       '@ampproject/remapping': 2.2.0
       '@babel/code-frame': 7.18.6
       '@babel/generator': 7.20.7
-      '@babel/helper-compilation-targets': 7.20.7_@babel+core@7.20.12
+      '@babel/helper-compilation-targets': 7.20.7_@babel+core@7.20.5
       '@babel/helper-module-transforms': 7.20.11
       '@babel/helpers': 7.20.13
       '@babel/parser': 7.20.13
@@ -63,14 +63,14 @@ packages:
       - supports-color
     dev: true
 
-  /@babel/eslint-parser/7.19.1_2je5tsgpdnpnp4f5qs5fqust6m:
+  /@babel/eslint-parser/7.19.1_tcs2bzbqyjitqyk7rfi5mr2zcy:
     resolution: {integrity: sha512-AqNf2QWt1rtu2/1rLswy6CDP7H9Oh3mMhk177Y67Rg8d7RD9WfOLLv8CGn6tisFvS2htm86yIe1yLF6I1UDaGQ==}
     engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
     peerDependencies:
       '@babel/core': '>=7.11.0'
       eslint: ^7.5.0 || ^8.0.0
     dependencies:
-      '@babel/core': 7.20.12
+      '@babel/core': 7.20.5
       '@nicolo-ribaudo/eslint-scope-5-internals': 5.1.1-v1
       eslint: 8.32.0
       eslint-visitor-keys: 2.1.0
@@ -86,14 +86,14 @@ packages:
       jsesc: 2.5.2
     dev: true
 
-  /@babel/helper-compilation-targets/7.20.7_@babel+core@7.20.12:
+  /@babel/helper-compilation-targets/7.20.7_@babel+core@7.20.5:
     resolution: {integrity: sha512-4tGORmfQcrc+bvrjb5y3dG9Mx1IOZjsHqQVUz7XCNHO+iTmqxWnVg3KRygjGmpRLJGdQSKuvFinbIb0CnZwHAQ==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0
     dependencies:
       '@babel/compat-data': 7.20.10
-      '@babel/core': 7.20.12
+      '@babel/core': 7.20.5
       '@babel/helper-validator-option': 7.18.6
       browserslist: 4.21.4
       lru-cache: 5.1.1
@@ -1230,8 +1230,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /lint-staged/13.1.0:
-    resolution: {integrity: sha512-pn/sR8IrcF/T0vpWLilih8jmVouMlxqXxKuAojmbiGX5n/gDnz+abdPptlj0vYnbfE0SQNl3CY/HwtM0+yfOVQ==}
+  /lint-staged/13.1.2:
+    resolution: {integrity: sha512-K9b4FPbWkpnupvK3WXZLbgu9pchUJ6N7TtVZjbaPsoizkqFUDkUReUL25xdrCljJs7uLUF3tZ7nVPeo/6lp+6w==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
