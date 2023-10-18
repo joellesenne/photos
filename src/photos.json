@@ -1,5 +1,26 @@
 [
   {
+    "id": 2020030139,
+    "title": "Lyon 2020",
+    "category": "Street Art",
+    "src": "images/street-art/202003-street-art-lyon-00139.jpg",
+    "alt": "Street Art - Lyon 2020"
+  },
+  {
+    "id": 2020030001,
+    "title": "Lyon 2020",
+    "category": "Wildlife",
+    "src": "images/wildlife/202003-wildlife-parc-tete-d-or-0001.jpg",
+    "alt": "Wildlife - Lyon 2020"
+  },
+  {
+    "id": 2020020953,
+    "title": "Lyon 2020",
+    "category": "Street Art",
+    "src": "images/street-art/202002-street-art-lyon-00953.jpg",
+    "alt": "Street Art - Lyon 2020"
+  },
+  {
     "id": 2020020036,
     "title": "Lyon 2020",
     "category": "Street Art",
@@ -7,10 +28,10 @@
     "alt": "Street Art - Lyon 2020"
   },
   {
-    "id": 20200200923,
+    "id": 20200200612,
     "title": "Lyon 2020",
     "category": "Street Art",
-    "src": "images/street-art/202002-street-art-lyon-00923.jpg",
+    "src": "images/street-art/202002-street-art-lyon-00612.jpg",
     "alt": "Street Art - Lyon 2020"
   },
   {
@@ -35,13 +56,6 @@
     "alt": "Street Art - Lyon 2020"
   },
   {
-    "id": 20200200425,
-    "title": "Lyon 2020",
-    "category": "Exhibition",
-    "src": "images/exhibition/2012002-exhibition-lyon-00425.jpg",
-    "alt": "Exhibition - Lyon 2020"
-  },
-  {
     "id": 20200200410,
     "title": "Lyon 2020",
     "category": "Street Art",
@@ -56,18 +70,32 @@
     "alt": "Street Art - Lyon 2020"
   },
   {
+    "id": 20200200808,
+    "title": "Lyon 2020",
+    "category": "Exhibition",
+    "src": "images/exhibition/2020002-exhibition-lyon-00808.jpg",
+    "alt": "Exhibition - Lyon 2020"
+  },
+  {
+    "id": 20200200425,
+    "title": "Lyon 2020",
+    "category": "Exhibition",
+    "src": "images/exhibition/2020002-exhibition-lyon-00425.jpg",
+    "alt": "Exhibition - Lyon 2020"
+  },
+  {
+    "id": 20200200354,
+    "title": "Lyon 2020",
+    "category": "Street Art",
+    "src": "images/street-art/202002-street-art-lyon-00354.jpg",
+    "alt": "Street Art - Lyon 2020"
+  },
+  {
     "id": 20200200244,
     "title": "Lyon 2020",
     "category": "Landscape",
     "src": "images/landscape/202002-landscape-lyon-00244.jpg",
     "alt": "Landscape - Lyon 2020"
-  },
-  {
-    "id": 20200200808,
-    "title": "Lyon 2020",
-    "category": "Exhibition",
-    "src": "images/exhibition/2012002-exhibition-lyon-00808.jpg",
-    "alt": "Exhibition - Lyon 2020"
   },
   {
     "id": 20200200338,
@@ -81,20 +109,6 @@
     "title": "Lyon 2020",
     "category": "Street Art",
     "src": "images/street-art/202002-street-art-lyon-00625.jpg",
-    "alt": "Street Art - Lyon 2020"
-  },
-  {
-    "id": 20200200612,
-    "title": "Lyon 2020",
-    "category": "Street Art",
-    "src": "images/street-art/202002-street-art-lyon-00612.jpg",
-    "alt": "Street Art - Lyon 2020"
-  },
-  {
-    "id": 20200200354,
-    "title": "Lyon 2020",
-    "category": "Street Art",
-    "src": "images/street-art/202002-street-art-lyon-00354.jpg",
     "alt": "Street Art - Lyon 2020"
   },
   {
