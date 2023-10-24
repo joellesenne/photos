@@ -1,5 +1,47 @@
 [
   {
+    "id": 2020060261,
+    "title": "Lyon 2020",
+    "category": "Street Art",
+    "src": "images/street-art/202006-street-art-lyon-00261.jpg",
+    "alt": "Street Art - Lyon 2020"
+  },
+  {
+    "id": 2020040136,
+    "title": "Lyon 2020",
+    "category": "Exhibition",
+    "src": "images/exhibition/202004-exhibition-lyon-00136.jpg",
+    "alt": "Exhibition - Lyon 2020"
+  },
+  {
+    "id": 2020030136,
+    "title": "Lyon 2020",
+    "category": "Exhibition",
+    "src": "images/exhibition/202003-exhibition-lyon-00136.jpg",
+    "alt": "Exhibition - Lyon 2020"
+  },
+  {
+    "id": 2020040835,
+    "title": "Lyon 2020",
+    "category": "Landscape",
+    "src": "images/landscape/202004-landscape-lyon-00835.jpg",
+    "alt": "Landscape - Lyon 2020"
+  },
+  {
+    "id": 2020030200,
+    "title": "Lyon 2020",
+    "category": "Street Art",
+    "src": "images/street-art/202003-street-art-lyon-00200.jpg",
+    "alt": "Street Art - Lyon 2020"
+  },
+  {
+    "id": 2020030914,
+    "title": "Lyon 2020",
+    "category": "Exhibition",
+    "src": "images/exhibition/202003-exhibition-lyon-00914.jpg",
+    "alt": "Exhibition - Lyon 2020"
+  },
+  {
     "id": 2020030139,
     "title": "Lyon 2020",
     "category": "Street Art",
