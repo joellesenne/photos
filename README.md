@@ -1,6 +1,6 @@
 <h1>Welcome to photos 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.1.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/joellesenne/photos#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -15,7 +15,7 @@
   </a>
 </p>
 
-> My gallery photos inspired by [Increpare](https://www.increpare.com/) and example code javaScript by [JavaScript tutorial](https://www.javascripttutorial.net/javascript-fetch-api/)
+> My gallery photos created by [Responsive image gallery](https://blog.logrocket.com/responsive-image-gallery-css-flexbox/) and [Data fetching with react suspense](https://dev.to/alakkadshaw/data-fetching-with-react-suspense-5ccn) 
 
 **Table of Contents**
 
@@ -36,7 +36,7 @@
 
 This project requires [node](https://nodejs.org) and [npm](https://npmjs.com). Go check them out if you don't have them locally installed.
 
-To learn Vite, check out the  [Vite guide](https://vitejs.dev/guide/).
+New this project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Install
 
@@ -62,26 +62,26 @@ pnpm install
 
 ```
 
+## Note
+
+Create file  `.env` and add REACT_APP_API_URL=https://api.example.com/file.json
+
 ## Usage
 
 ```sh
-# Run with vite.js
-npm run dev
+# Run with react.js
+npm start dev
 
 # Or
-vite
+env-cmd -f .env react-scripts start
 ```
-
-## Maintainability
-
-Automatically Format your code on Git Commit [here](https://dev.to/ruppysuppy/automatically-format-your-code-on-git-commit-using-husky-eslint-prettier-in-9-minutes-45eg)
 
 ## Author
 
 👤 **Joël Lesenne**
 
 - Website: https://joellesenne.dev
-- Twitter: [@joellesenne](https://twitter.com/joellesenne)
+- X (Twitter): [@joellesenne](https://twitter.com/joellesenne)
 - Github: [@joellesenne](https://github.com/joellesenne)
 - Codepen : [@joellesenne](https://codepen.io/joellesenne)
 - LinkedIn: [@joellesenne](https://linkedin.com/in/joellesenne)
@@ -102,4 +102,4 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2022 [Joël Lesenne](https://github.com/joellesenne). <br />This project is [MIT](https://github.com/joellesenne/photos.joellesenne.dev/blob/master/LICENSE) licensed.
+Copyright © 2023 [Joël Lesenne](https://github.com/joellesenne). <br />This project is [MIT](https://github.com/joellesenne/photos.joellesenne.dev/blob/master/LICENSE) licensed.
