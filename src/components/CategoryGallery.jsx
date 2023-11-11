@@ -5,10 +5,10 @@ export default function CategoryGallery({ data, category }) {
     const [isItemId, setIsItemId] = useState(null);
 
     const handleClick = (e, id) => {
+        e.preventDefault();
         setIsShown((current) => !current);
         setIsItemId(id);
         e.stopPropagation();
-        e.preventDefault();
     };
 
     return (
@@ -20,7 +20,7 @@ export default function CategoryGallery({ data, category }) {
                         <figure
                             key={index}
                             onClick={(e) => handleClick(e, item.id)}
-                            className={isShown && isItemId === item.id ? "show" : ""}
+                            className={isShown && isItemId === item.id ? "show" : "hide"}
                         >
                             <img
                                 src={"https://photos.joellesenne.dev/" + item.src}

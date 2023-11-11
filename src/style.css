@@ -83,18 +83,18 @@
     --theme-color: #f9faf9;
     --text-shadow: rgba(149, 30, 164, 0.4) 2px 2px, rgba(149, 30, 164, 0.3) 3px 3px;
     --font-family-body: 'Young Serif', serif;
-    --font-size: 62.5%;
-    --base-line: 1.15;
+    --base-line: 1.3;
     --base-font: calc(2em + (24 - 16) * ( (100vw - 400px) / (1600 - 400)));
     --anim-duration: 1s;
-  }
-  @media only screen and (min-width:1024px) {
-    :root {
-      --baseLine: 1.28
+    @media only screen and (min-width:1024px) {
+      --baseLine: 1.5;
+    }
+    @media screen and (prefers-reduced-motion: no-preference) {
+      --anim-duration: .25s;
     }
   }
   html {
-    font-size: var(--font-size);
+    font-size: 62.5%;
   }
   body {
     block-size: 100dvb;
@@ -107,18 +107,13 @@
     animation-duration: var(--anim-duration);
     transition: var(--anim-duration);
   }
-  @media screen and (prefers-reduced-motion: no-preference) {
-    body {
-      --anim-duration: .25s;
-    }
-  }
 }
 
 @layer typography {
   :root {
     --font-size-heading: calc(1em + 1vw);
     --font-bold: 600;
-    --line-height: 1.5;
+    --line-height: 1.7;
   }
   h1, h2 {
     font-family: var(--font-family-heading);
@@ -162,6 +157,10 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    text-align: center;
+    @media only screen and (min-width: 768px) {
+      text-align: start;
+    }
   }
   .nav {
     display: flex;
@@ -222,6 +221,9 @@
       content: "";
       flex-grow: 999;
     }
+    @media only screen and (min-width: 768px) {
+      flex-direction: row;
+    }
     & > figure {
       flex: 1 1 auto;
       flex-grow: 1;
@@ -237,66 +239,77 @@
         bottom: 0;
         right: 0;
         height: 100%;
-        background: rgba(57, 57, 57, 0.502);
+        background: rgba(57, 57, 57, 0.602);
+        backdrop-filter: blur(3px);
         cursor: zoom-out;
         z-index: 999;
       }
     }
-    & figure img {
-      width: 100%;
-      height: 100%;
-      vertical-align: middle;
-      box-shadow: 1px 2px 4px 2px rgba(32, 12, 113,.2);
-      object-fit: cover;
-      transition: var(--transition-all);
+    & figure {
+      & img {
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+        box-shadow: 1px 2px 4px 2px rgba(32, 12, 113,.2);
+        object-fit: cover;
+        transition: var(--transition-all);
+      }
+      &:hover img {
+        transform: scale(1.1);
+      }
+      &.show img {
+        object-fit: contain;
+        transform: scale(1);
+        animation: fadeIn 1000ms;
+      }
+      & .overlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        font-size: calc(10px + 2vmin);
+        text-align: center;
+        border-radius: var(--border-radius);
+        transform: scale(0);
+        transition: var(--transition-all);
+      }
+      &:hover .overlay {
+        transform: scale(1);
+      }
+      &:hover.show .overlay {
+        align-items: end;
+        font-size: calc(15px + 2vmin);
+        background-color: transparent;
+        animation: fadeIn 1000ms;
+        transition: var(--transition-all);
+      }
+      &.hide {
+
+        & .overlay {
+          opacity: 0;
+          background-color: transparent;
+          transform: scale(1);
+          animation: fadeOut 1000ms;
+        }
+        &:hover .overlay {
+          opacity: 1;
+          background: rgba(57, 57, 57, 0.502);
+          transform: scale(1.1);
+        }
+      }
     }
   }
-
-  .overlay {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    font-size: calc(10px + 2vmin);
-    background: rgba(57, 57, 57, 0.502);
-    border-radius: var(--border-radius);
-    transform: scale(0);
-    transition: var(--transition-all);
-  }
-  .gallery figure:hover .overlay {
-    transform: scale(1);
-  }
-
-  .gallery figure:hover.show .overlay {
-    align-items: end;
-    font-size: calc(15px + 2vmin);
-    background-color: transparent;
-    animation: fadeIn 1000ms;
-  }
-
-  .gallery figure:hover img {
-    transform: scale(1.1);
-  }
-
-  .gallery figure.show img {
-    object-fit: contain;
-    transform: scale(1);
-    animation: fadeIn 1000ms;
-  }
-
-  @media only screen and (min-width: 768px) {
-    .gallery {
-      flex-direction: row;
-    }
-  }
-
   @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
+  }
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
   }
 }

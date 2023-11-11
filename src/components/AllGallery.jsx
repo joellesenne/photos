@@ -4,10 +4,10 @@ export default function AllGallery({ data }) {
     const [isItemId, setIsItemId] = useState(null);
 
     const handleClick = (e, id) => {
+        e.preventDefault();
         setIsShown((current) => !current);
         setIsItemId(id);
         e.stopPropagation();
-        e.preventDefault();
     };
 
     return (
@@ -17,7 +17,7 @@ export default function AllGallery({ data }) {
                     <figure
                         key={index}
                         onClick={(e) => handleClick(e, item.id)}
-                        className={isShown && isItemId === item.id ? "show" : ""}
+                        className={isShown && isItemId === item.id ? "show" : "hide"}
                     >
                         <img
                             src={"https://photos.joellesenne.dev/" + item.src}
@@ -27,7 +27,7 @@ export default function AllGallery({ data }) {
               <span>
                 {item.title}
                   <br />
-                Category: {item.category}
+                {item.category}
               </span>
                         </figcaption>
                     </figure>
