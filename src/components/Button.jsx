@@ -11,7 +11,7 @@ export default function Button({ children, isActive, onClick }) {
 
     if (isActive) {
         return (
-            <button className="button active" onClick={handleClick}>
+            <button className="btn active" onClick={handleClick}>
                 {children}
             </button>
         );
@@ -19,14 +19,14 @@ export default function Button({ children, isActive, onClick }) {
 
     if (isPending) {
         return (
-            <button className="button pending" onClick={handleClick}>
+            <button className="btn pending" onClick={handleClick}>
                 {children}
             </button>
         );
     }
 
     return (
-        <button className="button" onClick={handleClick}>
+        <button className="btn" onClick={handleClick}>
             {children}
         </button>
     );

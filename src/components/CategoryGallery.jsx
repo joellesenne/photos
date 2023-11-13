@@ -12,7 +12,7 @@ export default function CategoryGallery({ data, category }) {
     };
 
     return (
-        <section className="gallery">
+        <section className="flex flex-wrap gap-20 gallery">
             {data &&
                 data
                     .filter((item) => item.category === category)
@@ -27,7 +27,7 @@ export default function CategoryGallery({ data, category }) {
                                 alt={item.alt}
                                 loading="lazy"
                             />
-                            <figcaption className="overlay">
+                            <figcaption className="flex items-center justify-center overlay">
                                 <span>{item.title}</span>
                             </figcaption>
                         </figure>

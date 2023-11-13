@@ -1,0 +1,17 @@
+@layer utilities {
+    .flex {display: flex;}
+    .flex-colum {flex-direction: column;}
+    .flex-wrap {flex-wrap: wrap;}
+    .items-center {align-items: center;}
+    .justify-center {justify-content: center;}
+    .gap-10 {gap: 10px;}
+    .gap-20 {gap: 20px;}
+    .w-media-80 {
+        @media only screen and (min-width: 768px) {
+            width: 80%;
+        }
+    }
+    .w-100 {width: 100%;}
+    .m-20 {margin: 20px;}
+    .text-center{text-align: center}
+}

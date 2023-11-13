@@ -11,7 +11,7 @@ export default function AllGallery({ data }) {
     };
 
     return (
-        <section className="gallery">
+        <section className="flex flex-wrap gap-20 gallery">
             {data &&
                 data.map((item, index) => (
                     <figure
@@ -23,7 +23,7 @@ export default function AllGallery({ data }) {
                             src={"https://photos.joellesenne.dev/" + item.src}
                             alt={item.alt}
                         />
-                        <figcaption className="overlay">
+                        <figcaption className="flex items-center justify-center overlay">
               <span>
                 {item.title}
                   <br />
