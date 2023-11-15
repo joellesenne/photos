@@ -10,9 +10,7 @@
         --text-shadow: rgba(149, 30, 164, 0.4) 2px 2px, rgba(149, 30, 164, 0.3) 3px 3px;
         --bg-color: #237b79;
         --anim-duration: 1s;
-        @media only screen and (min-width:1024px) {--baseLine: 1.5;  }
-        @media screen and (prefers-reduced-motion: no-preference) {--anim-duration: .25s;  }
-    }
+        }
 
     html {font-size: 62.5%;}
 
@@ -26,6 +24,18 @@
         background-color: var(--bg-color);
         animation-duration: var(--anim-duration);
         transition: var(--anim-duration);
+    }
+    @media only screen and (min-width:1024px) {
+        body {
+            --baseLine: 1.5;
+        }
+
+    }
+
+    @media screen and (prefers-reduced-motion: no-preference) {
+        body {
+            --anim-duration: .25s;
+        }
     }
 
     h1, h2 {

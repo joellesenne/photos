@@ -1,19 +1,13 @@
 @layer typography {
-    :root {
-        --font-size-heading: calc(1em + 1vw);
-    }
+    :root {--font-size-heading: calc(1em + 1vw);}
 
-    h1 {
-        font-size: calc(var(--font-size-heading) + 1vw);
-    }
-    h2 {
-        font-size: var(--font-size-heading);
-    }
+    h1 {font-size: calc(var(--font-size-heading) + 1vw);}
+
+    h2 {font-size: var(--font-size-heading);}
+
     a {
         color: var(--color-link-btn);
         transition: var(--transition);
-        &:hover {
-            color: var(--color-link-btn-hover);
-        }
+        &:hover {color: var(--color-link-btn-hover);}
     }
 }

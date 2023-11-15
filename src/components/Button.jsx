@@ -19,7 +19,7 @@ export default function Button({ children, isActive, onClick }) {
 
     if (isPending) {
         return (
-            <button className="btn pending" onClick={handleClick}>
+            <button className="btn pending" onClick={handleClick} type="button">
                 {children}
             </button>
         );
