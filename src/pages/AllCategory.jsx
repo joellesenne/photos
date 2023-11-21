@@ -1,8 +1,8 @@
-import GetDataFetch from "../GetDataFetch";
+import UseDataFetch from "../hooks/UseDataFetch";
 import AllGallery from "../components/AllGallery";
 
 export default function AllCategory() {
-    const { data, loading, error } = GetDataFetch();
+    const { data, loading, error } = UseDataFetch();
     return (
         <>
             <h2>All category</h2>

@@ -1,65 +1,75 @@
 @layer reset {
-    *:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+    *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
         all: unset;
         display: revert;
     }
     *, *::before, *::after {
-        box-sizing: border-box;
-        border: none;
-    }
-
-    html {
         box-sizing: inherit;
+    }
+    html {
+        box-sizing: border-box;
         text-rendering: optimizeLegibility;
         -moz-text-size-adjust: none;
         -webkit-text-size-adjust: none;
         text-size-adjust: none;
         &:focus-within {scroll-behavior: smooth;}
     }
-
     body, h1, h2, h3, h4, p,
     figure, blockquote, dl, dd {margin-block-end: 0;}
-
     ul[role='list'],
     ol[role='list'] {list-style: none;}
-
     h1, h2, h3, h4,
     button, input, label {line-height: 1.1;}
-
     h1, h2,
     h3, h4 {text-wrap: balance;}
-
     a:not([class]) {
         text-decoration-skip-ink: auto;
         cursor: pointer;
     }
-
+    a, button {
+        cursor: revert;
+    }
     img,
     picture {
-        display: block;
         width: 100%;
         height: 100%;
         max-width: 100%;
         vertical-align: middle;
     }
-
+    img {
+        max-inline-size: 100%;
+        max-block-size: 100%;
+    }
+    img[width] {
+        width: auto;
+    }
+    img[width][height] {
+        height: auto;
+    }
     input, button,
     textarea, select {font: inherit;}
-
+    input {opacity: 0;}
     button {
+        line-height: 1.15;
         outline: none;
         overflow: visible;
         -webkit-appearance: none;
         -moz-appearance: none;
     }
-
     textarea:not([rows]) {min-height: 10em;}
-
     :target {scroll-margin-block: 5ex;}
-
     code {font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;}
-
-    @media screen and (prefers-reduced-motion: reduce) {
-        * {transition: .01s!important;}
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+        html {
+            scroll-behavior: initial;
+        }
     }
 }

@@ -3,5 +3,5 @@ export  default function Content({children}) {
         <section className="content">
             {children}
         </section>
-    )
+    );
 }

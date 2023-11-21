@@ -1,6 +1,6 @@
 export default function Header({children}) {
     return (
-        <header className="flex flex-colum items-center justify-center gap-10 header">
+        <header className="flex flex-colum items-center justify-center header">
             {children}
         </header>
     );

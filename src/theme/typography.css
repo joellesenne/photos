@@ -6,8 +6,8 @@
     h2 {font-size: var(--font-size-heading);}
 
     a {
-        color: var(--color-link-btn);
+        color: var(--bg-link-btn);
         transition: var(--transition);
-        &:hover {color: var(--color-link-btn-hover);}
+        &:hover {color: var(--bg-link-btn-hover);}
     }
 }

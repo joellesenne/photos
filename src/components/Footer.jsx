@@ -1,5 +1,5 @@
-import React from 'react';
-import {useGetYear} from "../utils";
+import { useGetYear } from "../utils";
+
 export default function Footer() {
     return (
         <footer className="m-20 text-center">

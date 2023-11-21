@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-export default function GetDataFetch() {
+export default function UseDataFetch() {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        // eslint-disable-next-line no-undef
         const url = process.env.REACT_APP_API_URL;
 
         axios(url)
@@ -15,6 +14,7 @@ export default function GetDataFetch() {
                 setData(response.data);
                 setLoading(false);
             })
+            // eslint-disable-next-line no-shadow
             .catch((error) => {
                 setError(error);
                 setLoading(false);

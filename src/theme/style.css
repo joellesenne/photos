@@ -7,17 +7,42 @@
 @layer components {
   :root {
     --font-size-btn: calc(11px + 1vmin);
-    --color-link-btn: coral;
-    --color-link-btn-hover: chocolate ;
     --border-radius: 5px;
     --transition: .35s;
     --transition-all: all 0.2s 0.1s ease-in-out;
   }
   .container {
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 4rem;
     @media only screen and (min-width: 768px) {
       max-width: 1200px;
+    }
+  }
+  .theme-switch {
+    position: fixed;
+    top: 0;
+    right: 0;
+    & span {
+      position: relative;
+      cursor: pointer;
+      color: var(--bg-color);
+      background-color: var(--text-color);
+      font-size: 17px;
+      line-height: .8;
+      padding: 10px;
+      transition: var(--transition);
+      &:hover {
+        font-size: 19px;
+      }
+      &:before {
+        content: '';
+      }
+      @media only screen and (min-width: 768px) {
+        &:before {
+          content: 'Theme switch';
+          margin-inline-end: 15px;
+        }
+      }
     }
   }
   .header {
@@ -27,22 +52,46 @@
     }
   }
   .nav {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-block-start: 10px;
+    margin-block-end: 20px;
     & .btn {
-      background-color: var(--color-link-btn);
+      color: var(--color-link-btn);
+      background-color: var(--bg-link-btn);
       border-radius: 15px;
       box-shadow: rgba(149, 30, 164, 0.4) 3px 3px, rgba(149, 30, 164, 0.3) 5px 5px;
       cursor: pointer;
       transition: var(--transition);
       &:hover,
       &.active {
-        background-color: var(--color-link-btn-hover);
+        background-color: var(--bg-link-btn-hover);
         box-shadow: rgba(149, 30, 164, 0.4) 2px 2px, rgba(149, 30, 164, 0.3) 3px 3px;
       }
     }
     &.pending {
-      background-color: darkorange;
+      background-color: var(--bg-link-btn);
+    }
+  }
+  .scroll {
+    position: fixed;
+    min-width: auto;
+    top: 70%;
+    padding: 12px 8px;
+    right: -12px;
+    font-size: 25px;
+    color: var(--color-link-btn);
+    text-shadow: rgba(149, 30, 164, 0.4) 2px 2px, rgba(149, 30, 164, 0.3) 3px 3px;
+    line-height: .6;
+    background-color: var(--bg-link-btn);
+    border-radius: 50% 0 0 50%;
+    box-shadow: rgba(149, 30, 164, 0.4) 3px 3px, rgba(149, 30, 164, 0.3) 5px 5px;
+    cursor: pointer;
+    transition: var(--transition);
+    &:hover {
+      padding-right: 18px;
+      right: -25px;
+      transform: translateX(-10px);
+      background-color: chocolate;
+      box-shadow: rgba(149, 30, 164, 0.4) 2px 2px, rgba(149, 30, 164, 0.3) 3px 3px;
     }
   }
  .content {
@@ -50,7 +99,7 @@
     min-height: 100vh;
   }
   .gallery {
-    margin: 10px 0;
+    margin-block: 10px;
     height: auto;
     &::after {
       content: "";
@@ -117,6 +166,7 @@
       }
       &.show .overlay {
         align-items: end;
+        padding-block-end: 10px;
         font-size: calc(15px + 2vmin);
         background-color: transparent;
         animation: fadeIn 1000ms;

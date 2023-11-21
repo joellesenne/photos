@@ -13,11 +13,14 @@ import PanoramaCategory from "./pages/PanoramaCategory";
 import PortraitCategory from "./pages/PortraitCategory";
 import StreetArtCategory from "./pages/StreetArtCategory";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import ThemeSwitch from "./components/ThemeSwitch";
 
 export default  function App() {
     const [tab, setTab] = useState('all');
     return (
       <Layout>
+          <ThemeSwitch />
           <Header>
               <Greeting statue="(Beta)"/>
               <Navigation>
@@ -77,6 +80,7 @@ export default  function App() {
               {tab === 'street-art' && <StreetArtCategory />}
           </Content>
           <Footer />
+          <ScrollToTop title="🔝"/>
       </Layout>
   );
 }

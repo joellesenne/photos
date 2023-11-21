@@ -1,7 +1,8 @@
-import GetDataFetch from "../GetDataFetch";
+import UseDataFetch from "../hooks/UseDataFetch";
 import CategoryGallery from "../components/CategoryGallery";
+
 export  default function CityCategory() {
-    const { data, loading, error } = GetDataFetch();
+    const { data, loading, error } = UseDataFetch();
     return (
         <>
             <h2>City category</h2>
@@ -13,5 +14,5 @@ export  default function CityCategory() {
                 <CategoryGallery data={data} category="City" />
             )}
         </>
-    )
+    );
 }

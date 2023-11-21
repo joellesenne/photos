@@ -1,7 +1,8 @@
-import GetDataFetch from "../GetDataFetch";
+import UseDataFetch from "../hooks/UseDataFetch";
 import CategoryGallery from "../components/CategoryGallery";
+
 export  default function PanoramaCategory() {
-    const { data, loading, error } = GetDataFetch();
+    const { data, loading, error } = UseDataFetch();
     return (
         <>
             <h2>Panorama category</h2>
@@ -13,5 +14,5 @@ export  default function PanoramaCategory() {
                 <CategoryGallery data={data} category="Panorama" />
             )}
         </>
-    )
+    );
 }
