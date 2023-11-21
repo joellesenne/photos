@@ -26,7 +26,7 @@ export default function Button({ children, isActive, onClick }) {
     }
 
     return (
-        <button className="btn" onClick={handleClick}>
+        <button className="btn" onClick={handleClick} type="button">
             {children}
         </button>
     );

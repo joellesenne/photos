@@ -4,11 +4,14 @@ export default function ThemeSwitch() {
     const {theme, toggleDark} = UseThemeSwitch()
 
     return (
-        <label className="theme-switch">
+        <label
+            htmlFor="theme-switch"
+            className="theme-switch">
             <span>{theme === "dark" ? "🌌" : "☀️"}</span>
                 <input
-                    checked={theme === "dark"}
                     type="checkbox"
+                    id="theme-switch"
+                    checked={theme === "dark"}
                     onChange={toggleDark}
                 />
             </label>

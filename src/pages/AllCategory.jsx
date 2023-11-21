@@ -3,15 +3,20 @@ import AllGallery from "../components/AllGallery";
 
 export default function AllCategory() {
     const { data, loading, error } = UseDataFetch();
-    return (
+    if (loading) {
+        return (
+            <>
+                <h2>All category</h2>
+                <p>🌀 Loading...</p>
+            </>
+        );
+    } return (
         <>
             <h2>All category</h2>
-            {loading ? (
-                <p>🌀 Loading...</p>
-            ) : error ? (
+            {error ? (
                 <p>Error: {error.message}</p>
             ) : (
-                <AllGallery data={data} />
+                <AllGallery data={data}/>
             )}
         </>
     );

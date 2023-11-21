@@ -3,15 +3,20 @@ import CategoryGallery from "../components/CategoryGallery";
 
 export  default function ExhibitionCategory() {
     const { data, loading, error } = UseDataFetch();
-    return (
+    if (loading) {
+        return (
+            <>
+                <h2>Exhibition category</h2>
+                <p>🌀 Loading...</p>
+            </>
+        );
+    } return (
         <>
             <h2>Exhibition category</h2>
-            {loading ? (
-                <p>🌀 Loading...</p>
-            ) : error ? (
+            {error ? (
                 <p>Error: {error.message}</p>
             ) : (
-                <CategoryGallery data={data} category="Exhibition" />
+                <CategoryGallery data={data} category="Exhibition"/>
             )}
         </>
     );

@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 export function useHandleShown() {
     const [isShown, setIsShown] = useState(false);
     setIsShown((current) => !current);
@@ -14,10 +15,10 @@ export function useHandleItem(id) {
 export function useGetYear() {
     const currentYear = new Date().getFullYear();
     if (currentYear > 2022) {
-        return "2022-" + currentYear;
-    } else {
-        return String(currentYear);
+        return `2022-${  currentYear}`;
     }
+        return String(currentYear);
+
 }
 
 export function useScrollToTop() {

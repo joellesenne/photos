@@ -4,6 +4,7 @@ import { UseScrollToTop } from "../hooks/UseScrollToTop";
 export default function ScrollToTop({title}) {
     const {isVisible} = UseScrollToTop();
     return (
+        // eslint-disable-next-line react/jsx-no-useless-fragment
         <>
             {isVisible && (
                 <button
