@@ -64,7 +64,7 @@ pnpm install
 
 ## Note
 
-Create file  `.env.development` and add REACT_APP_API_URL=https://api.example.com/file.json learn more [Adding custom environment variables](https://create-react-app.dev/docs/adding-custom-environment-variables/)
+Create file  `.env.development` and add `REACT_APP_API_URL=https://api.example.com/file.json` learn more [Adding custom environment variables](https://create-react-app.dev/docs/adding-custom-environment-variables/)
 
 ## Usage
 
