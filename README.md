@@ -15,7 +15,7 @@
   </a>
 </p>
 
-> My gallery photos created by [Responsive image gallery](https://blog.logrocket.com/responsive-image-gallery-css-flexbox/) and [Data fetching with react suspense](https://dev.to/alakkadshaw/data-fetching-with-react-suspense-5ccn) 
+> My gallery photos created with [Responsive image gallery](https://blog.logrocket.com/responsive-image-gallery-css-flexbox/) and [Data fetching with react suspense](https://dev.to/alakkadshaw/data-fetching-with-react-suspense-5ccn) 
 
 **Table of Contents**
 
@@ -64,7 +64,7 @@ pnpm install
 
 ## Note
 
-Create file  `.env` and add REACT_APP_API_URL=https://api.example.com/file.json
+Create file  `.env.development` and add REACT_APP_API_URL=https://api.example.com/file.json learn more [Adding custom environment variables](https://create-react-app.dev/docs/adding-custom-environment-variables/)
 
 ## Usage
 
