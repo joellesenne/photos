@@ -6,6 +6,9 @@
     .justify-center {justify-content: center;}
     .gap-10 {gap: 10px;}
     .gap-20 {gap: 20px;}
+    .gap-10 {gap: 10px;}
+    .row-gap-20 {row-gap: 20px;}
+    .column-gap-10 {column-gap: 10px;}
     @media only screen and (min-width: 768px) {
         .w-media-80 {
             width: 80%;

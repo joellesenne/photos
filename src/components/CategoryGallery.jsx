@@ -12,7 +12,7 @@ export default function CategoryGallery({ data, category }) {
     };
 
     return (
-        <section className="flex flex-wrap gap-20 gallery">
+        <section className="flex flex-wrap column-gap-10 row-gap-20 gallery">
             {data &&
                 data
                     .filter((item) => item.category === category)

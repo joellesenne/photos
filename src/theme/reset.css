@@ -12,6 +12,7 @@
         -moz-text-size-adjust: none;
         -webkit-text-size-adjust: none;
         text-size-adjust: none;
+        scroll-behavior: initial;
         &:focus-within {scroll-behavior: smooth;}
     }
     body, h1, h2, h3, h4, p,
@@ -67,9 +68,6 @@
             animation-iteration-count: 1 !important;
             transition-duration: 0.01ms !important;
             scroll-behavior: auto !important;
-        }
-        html {
-            scroll-behavior: initial;
         }
     }
 }

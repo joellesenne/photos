@@ -15,7 +15,7 @@
     margin: 0 auto;
     padding: 0 4rem;
     @media only screen and (min-width: 768px) {
-      max-width: 1200px;
+      max-inline-size: 1200px;
     }
   }
   .theme-switch {
@@ -58,13 +58,13 @@
       color: var(--color-link-btn);
       background-color: var(--bg-link-btn);
       border-radius: 15px;
-      box-shadow: rgba(149, 30, 164, 0.4) 3px 3px, rgba(149, 30, 164, 0.3) 5px 5px;
+      box-shadow: var(--color-shadow);
       cursor: pointer;
       transition: var(--transition);
       &:hover,
       &.active {
         background-color: var(--bg-link-btn-hover);
-        box-shadow: rgba(149, 30, 164, 0.4) 2px 2px, rgba(149, 30, 164, 0.3) 3px 3px;
+        box-shadow: var(--color-shadow-hover);
       }
     }
     &.pending {
@@ -79,11 +79,11 @@
     right: -12px;
     font-size: 25px;
     color: var(--color-link-btn);
-    text-shadow: rgba(149, 30, 164, 0.4) 2px 2px, rgba(149, 30, 164, 0.3) 3px 3px;
+    text-shadow: var(--color-shadow);
     line-height: .6;
     background-color: var(--bg-link-btn);
     border-radius: 50% 0 0 50%;
-    box-shadow: rgba(149, 30, 164, 0.4) 3px 3px, rgba(149, 30, 164, 0.3) 5px 5px;
+    box-shadow: var(--color-shadow);
     cursor: pointer;
     transition: var(--transition);
     &:hover {
@@ -91,7 +91,7 @@
       right: -25px;
       transform: translateX(-10px);
       background-color: chocolate;
-      box-shadow: rgba(149, 30, 164, 0.4) 2px 2px, rgba(149, 30, 164, 0.3) 3px 3px;
+      box-shadow: var(--color-shadow-hover);
     }
   }
  .content {

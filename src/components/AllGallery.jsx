@@ -12,7 +12,7 @@ export default function AllGallery({ data }) {
     };
 
     return (
-        <section className="flex flex-wrap gap-20 gallery">
+        <section className="flex flex-wrap column-gap-10 row-gap-20 gallery">
             {data &&
                 data.map((item, index) => (
                     <figure

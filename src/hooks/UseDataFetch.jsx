@@ -7,7 +7,7 @@ export default function UseDataFetch() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const url = process.env.REACT_APP_API_URL;
+            const url = process.env.REACT_APP_API_URL;
 
         axios(url)
             .then((response) => {

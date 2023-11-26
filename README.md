@@ -22,7 +22,7 @@
 - [Prerequisites](#prerequisites)
 - [Install](#install)
 - [Usage](#usage)
-- [Maintainability](#maintainability)
+- [References and Sources](#references-and-sources)
 - [Author](#author)
 - [🤝 Contributing](#-contributing)
 - [Show your support](#show-your-support)
@@ -73,8 +73,24 @@ Create file  `.env` and add REACT_APP_API_URL=https://api.example.com/file.json
 npm start dev
 
 # Or
-env-cmd -f .env react-scripts start
+env-cmd -f .env.development react-scripts start
 ```
+## References and Sources
+
+- [React](https://react.dev/)
+- [Photo Gallery 2](https://codepen.io/alvaromontoro/pen/dyaOppN)
+- [Data Fetching with React Suspense](https://dev.to/alakkadshaw/data-fetching-with-react-suspense-5ccn)
+- [Writing CSS In 2023: Is It Any Different Than A Few Years Ago? — Smashing Magazine](https://www.smashingmagazine.com/2023/07/writing-css-2023/)
+- [Being Picky about a CSS Reset for Fun & Pleasure](https://chriscoyier.net/2023/10/03/being-picky-about-a-css-reset-for-fun-pleasure/)
+- [Modern CSS For Dynamic Component-Based Architecture | Modern CSS Solutions](https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/)
+- [A (more) Modern CSS Reset - Andy Bell](https://andy-bell.co.uk/a-more-modern-css-reset/)
+- [How to create a responsive image gallery with CSS flexbox - LogRocket Blog](https://blog.logrocket.com/responsive-image-gallery-css-flexbox/)
+- [ReactJs mapping array of items, onClick button always returns the last item of the array](https://stackoverflow.com/questions/73800580/reactjs-mapping-array-of-items-onclick-button-always-returns-the-last-item-of-t)
+- [React dark mode switch with CSS and JavaScript.](https://mty-tidjani.medium.com/react-dark-mode-switch-with-css-and-javascript-2d3f2c4fe676)
+- [Effortlessly Elevate Your React Code with ESLint and Prettier: A Step-by-Step Guide for 2023](https://aaron-janes.medium.com/effortlessly-elevate-your-react-code-with-eslint-and-prettier-a-step-by-step-guide-for-2023-b7cb065316fa)
+- [color-scheme | CSS-Tricks](https://css-tricks.com/almanac/properties/c/color-scheme/)
+- [Colors in Between - Explore the Spectrum](https://hexcolor.co/colors-between)
+- [OKLCH Color Picker & Converter](https://oklch.com/#63.44,0.155,50.27,100)
 
 ## Author
 
