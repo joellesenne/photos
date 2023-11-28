@@ -36,7 +36,6 @@
     * {
         transition-property: color, background-color, text-shadow;
         transition-duration: var(--anim-duration);
-        /* transition-timing-function: linear; */
         transition-timing-function: cubic-bezier(.1,.56,.97,.47);
         animation-duration: var(--anim-duration);
     }
