@@ -28,9 +28,9 @@
       color: var(--bg-color);
       background-color: var(--text-color);
       font-size: 17px;
-      line-height: .8;
       padding: 10px;
       transition: var(--transition);
+      text-shadow: 1px 1px 0 var(--color-shadow-dark);
       &:hover {
         font-size: 19px;
       }
@@ -56,14 +56,16 @@
     margin-block-end: 20px;
     & .btn {
       color: var(--color-link-btn);
+      text-shadow: 2px 1px 0 var(--color-shadow-dark);
       background-color: var(--bg-link-btn);
-      border-radius: 15px;
+      border: solid 3px var(--bg-link-btn-hover);
       box-shadow: var(--color-shadow);
       cursor: pointer;
       transition: var(--transition);
       &:hover,
       &.active {
-        background-color: var(--bg-link-btn-hover);
+        color: var(--bg-link-btn);
+        background-color: var(--color-link-btn);
         box-shadow: var(--color-shadow-hover);
       }
     }
@@ -75,21 +77,18 @@
     position: fixed;
     min-width: auto;
     top: 70%;
-    padding: 12px 8px;
-    right: -12px;
+    padding: 12px 8px 20px;
+    right: -10px;
     font-size: 25px;
     color: var(--color-link-btn);
-    text-shadow: var(--color-shadow);
+    text-shadow: none;
     line-height: .6;
     background-color: var(--bg-link-btn);
-    border-radius: 50% 0 0 50%;
     box-shadow: var(--color-shadow);
     cursor: pointer;
+    animation: translateTop 35ms cubic-bezier(.66,.01,1,.53)  infinite;
     transition: var(--transition);
     &:hover {
-      padding-right: 18px;
-      right: -25px;
-      transform: translateX(-10px);
       background-color: chocolate;
       box-shadow: var(--color-shadow-hover);
     }
@@ -155,6 +154,7 @@
         width: 100%;
         height: 100%;
         padding: 10px;
+        color: oklch(95% 0.019 46.81);
         font-size: calc(10px + 2vmin);
         text-align: center;
         border-radius: var(--border-radius);
@@ -188,7 +188,12 @@
     }
   }
   @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {opacity: 0;}
+    100% {opacity: 1;}
   }
+}
+@keyframes translateTop {
+  0% {transform: translateY(0);}
+  50% {transform: translateY(-.5rem);}
+  0% {transform: translateY(0);}
 }

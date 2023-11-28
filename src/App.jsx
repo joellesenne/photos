@@ -80,7 +80,7 @@ export default  function App() {
               {tab === 'street-art' && <StreetArtCategory />}
           </Content>
           <Footer />
-          <ScrollToTop title="🔝"/>
+          <ScrollToTop title="&#10595;"/>
       </Layout>
   );
 }

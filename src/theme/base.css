@@ -3,7 +3,9 @@
         color-scheme: light dark;
         --text-color: oklch(53.22% 0.08 192.78);
         --bg-color: oklch(95% 0.019 46.81);
-        --color-shadow: oklch(50.27% 0.043 70.59) 2px 2px, oklch(60% 0.043 70.59) 3px 3px;
+        --color-shadow-dark: oklch(50.27% 0.043 70.59);
+        --color-shadow-light: oklch(60% 0.043 70.59);
+        --color-shadow:-5px 3px 0 oklch(50.27% 0.043 70.59), -11px 4px 0 oklch(60% 0.043 70.59);
         --color-shadow-hover: oklch(50% 0.043 70.59) 1px 1px, oklch(60% 0.043 70.59) 2px 2px;
         --bg-link-btn: oklch(73.51% 0.168 40.25);
         --bg-link-btn-hover: oklch(68.53% 0.126 43.25);
@@ -29,11 +31,13 @@
     body.dark {
         --text-color: oklch(98.41% 0.002 145.56);
         --bg-color: oklch(0.533 0.08 192.78);
+        text-shadow: -7px 5px 0 var(--color-shadow-dark), -11px 7px 0 var(--color-shadow-light);
     }
     * {
-        transition-property: color, background-color, border-color;
+        transition-property: color, background-color, text-shadow;
         transition-duration: var(--anim-duration);
-        transition-timing-function: ease;
+        /* transition-timing-function: linear; */
+        transition-timing-function: cubic-bezier(.1,.56,.97,.47);
         animation-duration: var(--anim-duration);
     }
     html {font-size: 62.5%;}
@@ -43,7 +47,7 @@
         font-size: var(--base-font);
         line-height: var(--base-line);
         color: var(--text-color);
-        text-shadow: var(--color-shadow);
+        text-shadow: 2px 1px 0 var(--color-shadow-light), 3px 2px 0 var(--color-shadow-dark);
         background-color: var(--bg-color);
     }
     h1, h2 {
