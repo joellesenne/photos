@@ -6,13 +6,13 @@ export  default function LandscapeCategory() {
     if (loading) {
         return (
             <>
-                <h2>Landscape category</h2>
+                <h2>Landscape</h2>
                 <p>🌀 Loading...</p>
             </>
         );
     } return (
         <>
-            <h2>Landscape category</h2>
+            <h2>Landscape</h2>
             {error ? (
                 <p>Error: {error.message}</p>
             ) : (

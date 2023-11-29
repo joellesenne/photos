@@ -6,16 +6,56 @@
 
 @layer components {
   :root {
-    --font-size-btn: calc(11px + 1vmin);
-    --border-radius: 5px;
-    --transition: .35s;
+    --font-size-btn: calc(13px + 1vmin);
+    --transition: 35ms;
     --transition-all: all 0.2s 0.1s ease-in-out;
   }
   .container {
-    margin: 0 auto;
-    padding: 0 4rem;
-    @media only screen and (min-width: 768px) {
-      max-inline-size: 1200px;
+    display: flex;
+    flex-direction: column;
+    column-gap: 4rem;
+    flex-wrap: wrap;
+    padding-inline: 4rem;
+    @media (width > 1024px) {
+      flex-direction: row;
+      margin-block-start: 10rem;
+    }
+    @media (width > 1224px) {
+      margin-inline: auto;
+      max-width: 1280px;
+    }
+    > .header {
+      margin-block-start: 4rem;
+      margin-inline-end: 0;
+      max-width: 100%;
+      text-align: center;
+      @media (width > 768px) {
+        flex: 1;
+        margin-block-start: 2rem;
+        text-align: start;
+      }
+    }
+    > .content {
+      max-width: 100%;
+      min-height: 100vh;
+      @media (width > 1024px) {
+        margin-block-start: 15rem;
+      }
+      @media (width > 768px) {
+        margin-block-start: 4rem;
+        flex: 3;
+        & h2 {
+          transform: rotate(-3deg) translateY(-4rem);
+        }
+      }
+    }
+    > .footer {
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+      @media (width > 768px) {
+        text-align: left;
+      }
     }
   }
   .theme-switch {
@@ -23,7 +63,9 @@
     top: 0;
     right: 0;
     & span {
-      position: relative;
+      position: absolute;
+      top: 0;
+      right: 0;
       cursor: pointer;
       color: var(--bg-color);
       background-color: var(--text-color);
@@ -31,24 +73,21 @@
       padding: 10px;
       transition: var(--transition);
       text-shadow: 1px 1px 0 var(--color-shadow-dark);
+      @media (width > 1024px) {
+        position: relative;
+      }
       &:hover {
         font-size: 19px;
       }
       &:before {
         content: '';
       }
-      @media only screen and (min-width: 768px) {
+      @media (width > 1024px) {
         &:before {
           content: 'Theme switch';
           margin-inline-end: 15px;
         }
       }
-    }
-  }
-  .header {
-    text-align: center;
-    @media only screen and (min-width: 768px) {
-      text-align: start;
     }
   }
   .nav {
@@ -59,14 +98,17 @@
       text-shadow: 2px 1px 0 var(--color-shadow-dark);
       background-color: var(--bg-link-btn);
       border: solid 3px var(--bg-link-btn-hover);
-      box-shadow: var(--color-shadow);
+      box-shadow: 2px 1px 0 var(--color-shadow-light), 3px 2px 0 var(--color-shadow-dark);
       cursor: pointer;
-      transition: var(--transition);
+      transition: var(--transition-all);
       &:hover,
       &.active {
         color: var(--bg-link-btn);
         background-color: var(--color-link-btn);
-        box-shadow: var(--color-shadow-hover);
+        box-shadow: 2px 1px 0 var(--color-shadow-light), 3px 2px 0 var(--color-shadow-dark);
+      }
+      @media (width > 768px) {
+        box-shadow: -7px 5px 0 var(--color-shadow-dark);
       }
     }
     &.pending {
@@ -78,24 +120,23 @@
     min-width: auto;
     top: 70%;
     padding: 12px 8px 20px;
-    right: -10px;
+    right: -8px;
     font-size: 25px;
     color: var(--color-link-btn);
     text-shadow: none;
     line-height: .6;
     background-color: var(--bg-link-btn);
-    box-shadow: var(--color-shadow);
+    box-shadow: 2px 1px 0 var(--color-shadow-light), 3px 2px 0 var(--color-shadow-dark);
     cursor: pointer;
-    animation: translateTop 35ms cubic-bezier(.66,.01,1,.53)  infinite;
-    transition: var(--transition);
+
     &:hover {
       background-color: chocolate;
       box-shadow: var(--color-shadow-hover);
     }
-  }
- .content {
-    display: block;
-    min-height: 100vh;
+    @media (width > 768px) {
+      animation: translateTop var(--transition) cubic-bezier(.66,.01,1,.53)  infinite;
+      transition: var(--transition);
+    }
   }
   .gallery {
     margin-block: 10px;
@@ -104,7 +145,7 @@
       content: "";
       flex-grow: 999;
     }
-    @media only screen and (min-width: 768px) {
+    @media (width > 768px) {
       flex-direction: row;
     }
     & > figure {
@@ -160,6 +201,9 @@
         border-radius: var(--border-radius);
         transform: scale(0);
         transition: var(--transition-all);
+        > span {
+          text-shadow: 2px 1px 0 var(--color-shadow-light), 3px 2px 0 var(--color-shadow-dark);
+        }
       }
       &:hover .overlay {
         transform: scale(1);

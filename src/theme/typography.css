@@ -1,9 +1,9 @@
 @layer typography {
     :root {--font-size-heading: calc(1em + 1vw);}
 
-    h1 {font-size: calc(var(--font-size-heading) + 1vw);}
+    h1 {font-size: calc(var(--font-size-heading) + .5vw);}
 
-    h2 {font-size: var(--font-size-heading);}
+    h2 {font-size: calc(var(--font-size-heading) + .2vw);}
 
     a {
         color: var(--bg-link-btn);

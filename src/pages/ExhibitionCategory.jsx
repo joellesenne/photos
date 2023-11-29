@@ -6,13 +6,13 @@ export  default function ExhibitionCategory() {
     if (loading) {
         return (
             <>
-                <h2>Exhibition category</h2>
+                <h2>Exhibition</h2>
                 <p>🌀 Loading...</p>
             </>
         );
     } return (
         <>
-            <h2>Exhibition category</h2>
+            <h2>Exhibition</h2>
             {error ? (
                 <p>Error: {error.message}</p>
             ) : (

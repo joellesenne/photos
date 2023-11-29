@@ -6,13 +6,13 @@ export  default function StreetArtCategory() {
     if (loading) {
         return (
             <>
-                <h2>Street Art category</h2>
+                <h2>Street Art</h2>
                 <p>🌀 Loading...</p>
             </>
         );
     } return (
         <>
-            <h2>Street Art category</h2>
+            <h2>Street Art</h2>
             {error ? (
                 <p>Error: {error.message}</p>
             ) : (

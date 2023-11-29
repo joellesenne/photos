@@ -1,8 +1,8 @@
-export  default function Greeting({statue}) {
+export  default function Greeting() {
     return (
         <>
-            <h1>Gallery Photos - {statue}</h1>
-            <p>A collection of photographs 🖼️ <br/>By <a href="https://joellesenne.dev"  rel="noopener noreferrer"  target="_blank">Joël Lesenne</a></p>
+            <h1>Photographs & Retouch</h1>
+            <p>I am <a href="https://joellesenne.dev"  rel="noopener noreferrer"  target="_blank">Joël Lesenne</a> based in French</p>
         </>
     );
 }

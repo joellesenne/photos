@@ -6,13 +6,13 @@ export default function AllCategory() {
     if (loading) {
         return (
             <>
-                <h2>All category</h2>
+                <h2>All</h2>
                 <p>🌀 Loading...</p>
             </>
         );
     } return (
         <>
-            <h2>All category</h2>
+            <h2>All</h2>
             {error ? (
                 <p>Error: {error.message}</p>
             ) : (

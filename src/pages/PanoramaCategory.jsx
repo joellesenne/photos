@@ -6,13 +6,13 @@ export  default function PanoramaCategory() {
     if (loading) {
         return (
             <>
-                <h2>Panorama category</h2>
+                <h2>Panorama</h2>
                 <p>🌀 Loading...</p>
             </>
         );
     } return (
         <>
-            <h2>Panorama category</h2>
+            <h2>Panorama</h2>
             {error ? (
                 <p>Error: {error.message}</p>
             ) : (

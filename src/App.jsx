@@ -22,7 +22,7 @@ export default  function App() {
       <Layout>
           <ThemeSwitch />
           <Header>
-              <Greeting statue="(Beta)"/>
+              <Greeting />
               <Navigation>
                   <Suspense fallback={<h2>🌀 Loading...</h2>}>
                       <Button

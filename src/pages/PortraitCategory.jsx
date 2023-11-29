@@ -6,13 +6,13 @@ export  default function PortraitCategory() {
     if (loading) {
         return (
             <>
-                <h2>Portrait category</h2>
+                <h2>Portrait</h2>
                 <p>🌀 Loading...</p>
             </>
         );
     } return (
         <>
-            <h2>Portrait category</h2>
+            <h2>Portrait</h2>
             {error ? (
                 <p>Error: {error.message}</p>
             ) : (
