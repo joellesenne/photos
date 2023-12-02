@@ -26,6 +26,7 @@ export default  function App() {
                 <Header>
                     <Greeting />
                     <Navigation>
+                        <p>Select category</p>
                         <Suspense fallback={<h2>🌀 Loading...</h2>}>
                             <Button
                                 isActive={tab === 'all'}

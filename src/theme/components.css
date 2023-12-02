@@ -10,6 +10,7 @@
             position: fixed;
             top: 0;
             right: 0;
+            z-index: 9999;
             & span {
                 position: absolute;
                 top: 0;
@@ -18,19 +19,13 @@
                 color: var(--bg-color);
                 background-color: var(--text-color);
                 font-size: 17px;
-                padding: 10px;
+                padding: 11px;
                 transition: var(--transition);
                 text-shadow: 1px 1px 0 var(--color-shadow-dark);
+                &:hover {font-size: 19px;}
+                &::before {content: '';}
                 @media (width >= 1024px) {
                     position: relative;
-                }
-                &:hover {
-                    font-size: 19px;
-                }
-                &:before {
-                    content: '';
-                }
-                @media (width >= 1024px) {
                     &:before {
                         content: 'Theme switch';
                         margin-inline-end: 15px;
@@ -39,6 +34,8 @@
             }
         }
         .nav {
+            position: sticky;
+            top: 0;
             margin-block-start: 10px;
             margin-block-end: 20px;
             & .btn {
@@ -59,8 +56,10 @@
                     box-shadow: -7px 5px 0 var(--color-shadow-dark);
                 }
             }
-            &.pending {
-                background-color: var(--bg-link-btn);
+            &.pending {background-color: var(--bg-link-btn);}
+            & p {display: none;}
+            @media (width >= 1024px) {
+                & p {display: block;}
             }
         }
         .scroll {
@@ -76,7 +75,7 @@
             background-color: var(--bg-link-btn);
             box-shadow: 2px 1px 0 var(--color-shadow-light), 3px 2px 0 var(--color-shadow-dark);
             cursor: pointer;
-
+            z-index: 9999;
             &:hover {
                 background-color: chocolate;
                 box-shadow: var(--color-shadow-hover);
@@ -105,32 +104,24 @@
                 overflow: hidden;
                 cursor: zoom-in;
                 &.show {
-                    position: fixed;
+                    position: sticky;
                     top: 0;
                     left: 0;
                     bottom: 0;
                     right: 0;
-                    height: 100%;
+                    width: 100dvh;
+                    height: 100lvh;
                     background: rgba(57, 57, 57, 0.602);
-                    backdrop-filter: blur(3px);
+                    /*backdrop-filter: blur(13px);*/
                     cursor: zoom-out;
                     z-index: 999;
                 }
-            }
-            &:has(figure:hover) figure:not(:hover) {
-                & img {
-                    filter: brightness(0.35);
-                }
-            }
-            & figure {
                 & img {
                     box-shadow: 1px 2px 4px 2px rgba(32, 12, 113,.2);
                     object-fit: cover;
                     transition: var(--transition-all);
                 }
-                &:hover img {
-                    transform: scale(1.1);
-                }
+                &:hover img {transform: scale(1.1);}
                 &.show img {
                     object-fit: contain;
                     transform: scale(1);
@@ -143,40 +134,33 @@
                     width: 100%;
                     height: 100%;
                     padding: 10px;
+                    align-items: center;
                     color: oklch(95% 0.019 46.81);
                     font-size: calc(10px + 2vmin);
-                    text-align: center;
                     border-radius: var(--border-radius);
                     transform: scale(0);
                     transition: var(--transition-all);
-                    > span {
-                        text-shadow: 2px 1px 0 var(--color-shadow-light), 3px 2px 0 var(--color-shadow-dark);
-                    }
+                    > span {text-shadow: 2px 1px 0 var(--color-shadow-light), 3px 2px 0 var(--color-shadow-dark);}
                 }
-                &:hover .overlay {
-                    transform: scale(1);
-                }
+                &:hover .overlay {transform: scale(1);}
                 &.show .overlay {
                     align-items: end;
-                    padding-block-end: 10px;
+                    padding-block-end: 30px;
                     font-size: calc(15px + 2vmin);
                     background-color: transparent;
                     animation: fadeIn 1000ms;
                     transform: scale(1);
                     transition: var(--transition-all);
                 }
-                &.hide {
-                    & .overlay {
-                        opacity: 0;
-                        background-color: transparent;
-                        transform: scale(1);
-                    }
-                    &:hover .overlay {
-                        opacity: 1;
-                        background: rgba(57, 57, 57, 0.502);
-                        transform: scale(1.1);
-                    }
+                &.hide .overlay {
+                    opacity: 0;
+                    background-color: transparent;
+                    transform: scale(1);
                 }
+                &:hover .overlay {opacity: 1;}
+            }
+            &:has(figure:hover) figure:not(:hover) {
+                & img {filter: brightness(0.65);}
             }
         }
         @keyframes fadeIn {

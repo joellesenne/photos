@@ -27,7 +27,7 @@ export default function CategoryGallery({ data, category }) {
                                 alt={item.alt}
                                 loading="lazy"
                             />
-                            <figcaption className="flex items-center justify-center overlay">
+                            <figcaption className="flex justify-center overlay">
                                 <span>{item.title}</span>
                             </figcaption>
                         </figure>

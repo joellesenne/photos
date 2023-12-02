@@ -24,7 +24,7 @@ export default function AllGallery({ data }) {
                             src={(process.env.NODE_ENV === "development") ?`assets/${  item.src}` : `https://photos.joellesenne.dev/${  item.src}`}
                             alt={item.alt}
                         />
-                        <figcaption className="flex items-center justify-center overlay">
+                        <figcaption className="flex justify-center overlay">
               <span>
                 {item.title}
                   <br />
