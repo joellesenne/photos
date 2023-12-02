@@ -19,68 +19,70 @@ import ThemeSwitch from "./components/ThemeSwitch";
 export default  function App() {
     const [tab, setTab] = useState('all');
     return (
-      <Layout>
-          <ThemeSwitch />
-          <Header>
-              <Greeting />
-              <Navigation>
-                  <Suspense fallback={<h2>🌀 Loading...</h2>}>
-                      <Button
-                          isActive={tab === 'all'}
-                          onClick={() => setTab('all')}
-                      >
-                          All
-                      </Button>
-                      <Button
-                          isActive={tab === 'city'}
-                          onClick={() => setTab('city')}
-                      >
-                          City
-                      </Button>
-                      <Button
-                          isActive={tab === 'exhibition'}
-                          onClick={() => setTab('exhibition')}
-                      >
-                          Exhibition
-                      </Button>
-                      <Button
-                          isActive={tab === 'landscape'}
-                          onClick={() => setTab('landscape')}
-                      >
-                          Landscape
-                      </Button>
-                      <Button
-                          isActive={tab === 'panorama'}
-                          onClick={() => setTab('panorama')}
-                      >
-                          Panorama
-                      </Button>
-                      <Button
-                          isActive={tab === 'portrait'}
-                          onClick={() => setTab('portrait')}
-                      >
-                          Portrait
-                      </Button>
-                      <Button
-                          isActive={tab === 'street-art'}
-                          onClick={() => setTab('street-art')}
-                      >
-                          Street Art
-                      </Button>
-                  </Suspense>
-              </Navigation>
-          </Header>
-          <Content>
-              {tab === 'all' && <AllCategory />}
-              {tab === 'city' && <CityCategory />}
-              {tab === 'exhibition' && <ExhibitionCategory />}
-              {tab === 'landscape' && <LandscapeCategory />}
-              {tab === 'panorama' && <PanoramaCategory />}
-              {tab === 'portrait' && <PortraitCategory />}
-              {tab === 'street-art' && <StreetArtCategory />}
-          </Content>
-          <Footer />
-          <ScrollToTop title="&#10595;"/>
-      </Layout>
+        <>
+            <ThemeSwitch />
+            <ScrollToTop title="&#10595;"/>
+            <Layout>
+                <Header>
+                    <Greeting />
+                    <Navigation>
+                        <Suspense fallback={<h2>🌀 Loading...</h2>}>
+                            <Button
+                                isActive={tab === 'all'}
+                                onClick={() => setTab('all')}
+                            >
+                                All
+                            </Button>
+                            <Button
+                                isActive={tab === 'city'}
+                                onClick={() => setTab('city')}
+                            >
+                                City
+                            </Button>
+                            <Button
+                                isActive={tab === 'exhibition'}
+                                onClick={() => setTab('exhibition')}
+                            >
+                                Exhibition
+                            </Button>
+                            <Button
+                                isActive={tab === 'landscape'}
+                                onClick={() => setTab('landscape')}
+                            >
+                                Landscape
+                            </Button>
+                            <Button
+                                isActive={tab === 'panorama'}
+                                onClick={() => setTab('panorama')}
+                            >
+                                Panorama
+                            </Button>
+                            <Button
+                                isActive={tab === 'portrait'}
+                                onClick={() => setTab('portrait')}
+                            >
+                                Portrait
+                            </Button>
+                            <Button
+                                isActive={tab === 'street-art'}
+                                onClick={() => setTab('street-art')}
+                            >
+                                Street Art
+                            </Button>
+                        </Suspense>
+                    </Navigation>
+                </Header>
+                <Content>
+                    {tab === 'all' && <AllCategory />}
+                    {tab === 'city' && <CityCategory />}
+                    {tab === 'exhibition' && <ExhibitionCategory />}
+                    {tab === 'landscape' && <LandscapeCategory />}
+                    {tab === 'panorama' && <PanoramaCategory />}
+                    {tab === 'portrait' && <PortraitCategory />}
+                    {tab === 'street-art' && <StreetArtCategory />}
+                </Content>
+                <Footer />
+            </Layout>
+        </>
   );
 }

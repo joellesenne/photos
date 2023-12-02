@@ -23,7 +23,7 @@ export default function CategoryGallery({ data, category }) {
                             className={isShown && isItemId === item.id ? "show" : "hide"}
                         >
                             <img
-                                src={`https://photos.joellesenne.dev/${  item.src}`}
+                                src={(process.env.NODE_ENV === "development") ?`assets/${  item.src}` : `https://photos.joellesenne.dev/${  item.src}`}
                                 alt={item.alt}
                                 loading="lazy"
                             />

@@ -21,7 +21,7 @@ export default function AllGallery({ data }) {
                         className={isShown && isItemId === item.id ? "show" : "hide"}
                     >
                         <img
-                            src={`https://photos.joellesenne.dev/${  item.src}`}
+                            src={(process.env.NODE_ENV === "development") ?`assets/${  item.src}` : `https://photos.joellesenne.dev/${  item.src}`}
                             alt={item.alt}
                         />
                         <figcaption className="flex items-center justify-center overlay">

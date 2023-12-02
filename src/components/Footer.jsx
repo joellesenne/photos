@@ -2,7 +2,7 @@ import { useGetYear } from "../utils";
 
 export default function Footer() {
     return (
-        <footer className="m-20 footer">
+        <footer className="footer">
             <p>
                 © {useGetYear()}{" "}
                 <a

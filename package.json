@@ -19,6 +19,7 @@
     "format": "prettier - write src/**/*.{js,jsx,} - config .prettierrc.json",
     "start": "env-cmd -f .env.development react-scripts start",
     "serve": "serve -s build",
+    "server": "json-server --watch src/api/db.json --port 3030",
     "test": "react-scripts test"
   },
   "browserslist": {

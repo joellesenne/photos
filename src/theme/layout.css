@@ -1,0 +1,53 @@
+@layer layout {
+    .container {
+        display: flex;
+        flex-direction: column;
+        column-gap: 4rem;
+        flex-wrap: wrap;
+        padding-inline: 4rem;
+        container-type: inline-size;
+        @media (width >= 1024px) {
+            flex-direction: row;
+            margin-block-start: 10rem;
+        }
+        @media (width >= 1224px) {
+            margin-inline: auto;
+            max-width: 1280px;
+        }
+        > .header {
+            margin-block-start: 4rem;
+            margin-inline-end: 0;
+            max-width: 100%;
+            text-align: center;
+            @container (width >= 768px) {
+                flex: 1;
+                margin-block-start: 2rem;
+                text-align: start;
+            }
+            @container (width >= 1024px) {
+                & h1 {
+                    transform: rotate(-3deg) translateY(-4rem);
+                }
+            }
+        }
+        > .content {
+            max-width: 100%;
+            min-height: 100vh;
+            @container (width >= 1024px) {
+                margin-block-start: 15rem;
+            }
+            @container (width >= 768px) {
+                margin-block-start: 4rem;
+                flex: 3;
+            }
+        }
+        > .footer {
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+            @container (width >= 768px) {
+                text-align: left;
+            }
+        }
+    }
+}
