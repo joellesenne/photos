@@ -7,7 +7,11 @@ export default function ThemeSwitch() {
         <label
             htmlFor="theme-switch"
             className="theme-switch">
-            <span>{theme === "dark" ? "🌌" : "☀️"}</span>
+            <span>
+                {(theme === "dark") ? (
+                        <img src='assets/images/moon.png' alt="Moon"/>
+                    ) : (
+                        <img src='assets/images/sun.png' alt="Sun"/>)}</span>
                 <input
                     type="checkbox"
                     id="theme-switch"

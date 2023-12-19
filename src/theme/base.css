@@ -2,16 +2,16 @@
     :root {
         color-scheme: light dark;
         --text-color: oklch(53.22% 0.08 192.78);
-        --bg-color: oklch(95% 0.019 46.81);
-        --color-shadow-dark: oklch(50.27% 0.043 70.59);
-        --color-shadow-light: oklch(60% 0.043 70.59);
-        --color-shadow:-5px 3px 0 oklch(50.27% 0.043 70.59), -11px 4px 0 oklch(60% 0.043 70.59);
-        --color-shadow-hover: oklch(50% 0.043 70.59) 1px 1px, oklch(60% 0.043 70.59) 2px 2px;
-        --bg-link-btn: oklch(73.51% 0.168 40.25);
-        --bg-link-btn-hover: oklch(68.53% 0.126 43.25);
-        --color-link-btn: oklch(95% 0.019 46.81);
+        --bg-color: oklch(97.92% 0.021 193.19);
+        --color-shadow-dark: oklch(39.22% 0.031 192.83);
+        --color-shadow-light: oklch(53.78% 0.108 115.3);
+        --color-shadow:-5px 3px 0 var(--color-shadow-dark), -11px 4px 0 var(--color-shadow-light);
+        --color-shadow-hover: var(--color-shadow-dark) 1px 1px, var(--color-shadow-light) 2px 2px;
+        --bg-link-btn: oklch(73.11% 0.18872464406115802 354.988964178936);
+        --bg-link-btn-hover: oklch(87.52% 0.079 192.82);
+        --color-link-btn: oklch(97.92% 0.021 193.19);
         --font-family-body: 'Young Serif', serif;
-        --font-family-heading: 'Oswald', sans-serif;
+        --font-family-heading: 'Antonio', sans-serif;
         --base-line: 1.3;
         --base-font: calc(2em + (24 - 16) * ( (100vw - 400px) / (1600 - 400)));
         --font-bold: 600;
@@ -25,8 +25,10 @@
     }
     html:has(.dark),
     body.dark {
-        --text-color: oklch(98.41% 0.002 145.56);
+        --text-color: oklch(97.92% 0.021 193.19);
         --bg-color: oklch(0.533 0.08 192.78);
+        --bg-link-btn: oklch(87.52% 0.079 192.82);
+        --bg-link-btn-hover: oklch(73.11% 0.18872464406115802 354.988964178936);
         text-shadow: -5px 3px 0 var(--color-shadow-dark), -7px 5px 0 var(--color-shadow-light);
     }
     * {
@@ -52,12 +54,15 @@
         line-height: var(--line-height);
     }
     :is(header, article, footer) p {padding-block: 1.5rem;}
+    button,
+    select {
+        font-family: var(--font-family-heading);
+        font-size: var(--font-size-btn);
+    }
     button {
         margin: 1rem;
         padding: 1rem;
         min-width: 110px;
-        font-family: var(--font-family-heading);
-        font-size: var(--font-size-btn);
         text-align: center;
     }
 }

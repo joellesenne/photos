@@ -18,8 +18,7 @@
     "lint:fix": "eslint - fix src/**/*.{js,jsx,}",
     "format": "prettier - write src/**/*.{js,jsx,} - config .prettierrc.json",
     "start": "env-cmd -f .env.development react-scripts start",
-    "serve": "serve -s build",
-    "server": "json-server --watch src/api/db.json --port 3030",
+    "serve": "serve -s build -p 3080",
     "test": "react-scripts test"
   },
   "browserslist": {
@@ -41,10 +40,10 @@
     ]
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^6.1.4",
-    "@testing-library/react": "^14.1.0",
+    "@testing-library/jest-dom": "^6.1.5",
+    "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.1",
-    "axios": "^1.6.1",
+    "axios": "^1.6.2",
     "env-cmd": "^10.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -52,11 +51,11 @@
     "web-vitals": "^3.5.0"
   },
   "devDependencies": {
-    "eslint": "^8.53.0",
+    "eslint": "^8.55.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^3.1.0"

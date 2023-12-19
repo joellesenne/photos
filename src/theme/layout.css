@@ -35,6 +35,9 @@
             min-height: 100vh;
             @container (width >= 1024px) {
                 margin-block-start: 15rem;
+                & h2 {
+                    transform: rotate(-3deg) translateY(-2rem);
+                }
             }
             @container (width >= 768px) {
                 margin-block-start: 4rem;

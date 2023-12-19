@@ -11,6 +11,14 @@ export default function Footer() {
                     target="_blank"
                 >
                     Joël Lesenne
+                </a>{" - "}
+                This project is{" "}
+                <a
+                    href="https://github.com/joellesenne/photos"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    Open Source
                 </a>
             </p>
         </footer>

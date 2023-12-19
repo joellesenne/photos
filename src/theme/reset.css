@@ -50,14 +50,29 @@
     input, button,
     textarea, select {font: inherit;}
     input {opacity: 0;}
-    button {
+    button, select {
         line-height: 1.15;
         outline: none;
         overflow: visible;
+        appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
     }
     textarea:not([rows]) {min-height: 10em;}
+    select {
+    background-color: transparent;
+        border: none;
+        padding: 0 1em 0 0;
+        margin: 0;
+        width: 100%;
+        font-family: inherit;
+        font-size: inherit;
+        cursor: inherit;
+        line-height: inherit;
+        &::-ms-expand {
+            display: none;
+        }
+    }
     :target {scroll-margin-block: 5ex;}
     code {font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;}
     @media (prefers-reduced-motion: reduce) {

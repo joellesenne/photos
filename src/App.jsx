@@ -15,6 +15,8 @@ import StreetArtCategory from "./pages/StreetArtCategory";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import ThemeSwitch from "./components/ThemeSwitch";
+import TravelCategory from "./pages/TravelCategory";
+import WildlifeCategory from "./pages/WildlifeCategory";
 
 export default  function App() {
     const [tab, setTab] = useState('all');
@@ -26,13 +28,19 @@ export default  function App() {
                 <Header>
                     <Greeting />
                     <Navigation>
-                        <p>Select category</p>
+                        <p>Select category :</p>
                         <Suspense fallback={<h2>🌀 Loading...</h2>}>
                             <Button
                                 isActive={tab === 'all'}
                                 onClick={() => setTab('all')}
                             >
                                 All
+                            </Button>
+                            <Button
+                                isActive={tab === 'travel'}
+                                onClick={() => setTab('travel')}
+                            >
+                                Travel
                             </Button>
                             <Button
                                 isActive={tab === 'city'}
@@ -70,17 +78,25 @@ export default  function App() {
                             >
                                 Street Art
                             </Button>
+                            <Button
+                                isActive={tab === 'wildlife'}
+                                onClick={() => setTab('wildlife')}
+                            >
+                                Wildlife
+                            </Button>
                         </Suspense>
                     </Navigation>
                 </Header>
                 <Content>
                     {tab === 'all' && <AllCategory />}
                     {tab === 'city' && <CityCategory />}
+                    {tab === 'travel' && <TravelCategory />}
                     {tab === 'exhibition' && <ExhibitionCategory />}
                     {tab === 'landscape' && <LandscapeCategory />}
                     {tab === 'panorama' && <PanoramaCategory />}
                     {tab === 'portrait' && <PortraitCategory />}
                     {tab === 'street-art' && <StreetArtCategory />}
+                    {tab === 'wildlife' && <WildlifeCategory />}
                 </Content>
                 <Footer />
             </Layout>
