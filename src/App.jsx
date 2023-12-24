@@ -1,4 +1,5 @@
 import { Suspense, useState } from 'react';
+import CookieConsent from "react-cookie-consent";
 import Layout from "./components/Layout";
 import Header from "./components/header";
 import Navigation from "./components/Navigation";
@@ -100,6 +101,16 @@ export default  function App() {
                 </Content>
                 <Footer />
             </Layout>
+            <CookieConsent
+                location="bottom"
+                buttonText="Sure man!!"
+                cookieName="myAwesomeCookieName2"
+                style={{ background: "#2B373B" }}
+                buttonStyle={{ color: "#4e503b", textShadow: "none" }}
+                expires={150}
+            >
+                This website uses cookies to enhance the user experience.
+            </CookieConsent>
         </>
   );
 }

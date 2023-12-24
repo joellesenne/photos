@@ -7,7 +7,17 @@
 
     a {
         color: var(--bg-link-btn);
-        transition: var(--transition);
-        &:hover {color: var(--bg-link-btn-hover);}
+        text-shadow: -2px 2px 0 var(--color-shadow-dark);
+        text-decoration: underline;
+        text-decoration-color: var(--bg-link-btn-hover);
+        text-decoration-thickness: 0.2rem;
+        text-decoration-style: wavy;
+        text-decoration-skip-ink: none;
+
+        transition: var(--transition-all);
+        &:hover {
+            color: var(--bg-link-btn-hover);
+            text-decoration-color: var(--bg-link-btn);
+        }
     }
 }
