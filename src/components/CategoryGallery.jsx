@@ -9,7 +9,12 @@ const Figure = memo(({ item, isShown, isItemId, handleClick }) => (
     <figure
         data-id={item.id}
         onClick={(e) => handleClick(e, item.id)}
-        className={isShown && isItemId === item.id ? "show" : "hide"}
+        className={
+            `${
+                isShown && isItemId === item.id ? "show" : "hide"
+            } 
+            animation-in animation-in-timeline animation-in-range`
+        }
     >
         <img
             src={
