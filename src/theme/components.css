@@ -9,6 +9,17 @@
         --transition: 35ms;
         --transition-all: all 0.2s 0.1s ease-in-out;
     }
+    .progress {
+        position: fixed;
+        left: 0; top: 0;
+        width: 100%; height: .2em;
+        background: var(--bg-link-btn);
+
+        transform-origin: 0 50%;
+        animation: grow-progress auto linear;
+        animation-timeline: scroll();
+        z-index: 99990;
+    }
     .theme-switch {
         position: fixed;
         top: 0;
@@ -16,14 +27,11 @@
         z-index: 9999;
         & span {
             padding-block-start: 8px;
-            padding-block-end: 6px;
-            padding-inline: 7px;
-            background-color: var(--text-color);
             cursor: pointer;
             transition: var(--transition-all);
             & img {
-                width: 25px;
-                height: 25px;
+                width: 50px;
+                height: 50px;
             }
         }
     }
@@ -115,6 +123,14 @@
             animation: .65s var(--custom-easing) var(--transition) infinite both translateTop;
         }
     }
+    .loading span {
+        animation-name: blink;
+        animation-duration: 1.4s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+        &:nth-child(2) {animation-delay: 0.2s;}
+        &:nth-child(3) {animation-delay: 0.4s;}
+    }
     .gallery {
         margin-block: 10px;
         height: auto;
@@ -138,6 +154,9 @@
             border: 1px solid rgba( 255, 255, 255, 0.18 );
             overflow: hidden;
             cursor: zoom-in;
+            animation: animate-in ease-in both;
+            animation-timeline: view();
+            animation-range: entry 25% cover calc(50% - 10vh);
             transition: var(--transition-all);
             &:hover {
                 box-shadow: 0 4px 12px 0 rgba( 31, 38, 135, 0.37 );
@@ -156,6 +175,7 @@
                 backdrop-filter: blur(3px);
                 cursor: zoom-out;
                 z-index: 999;
+                animation: none;
             }
             & img {
                 box-shadow: 1px 2px 4px 2px rgba(32, 12, 113,.2);
@@ -204,9 +224,23 @@
             & img {filter: brightness(0.65);}
         }
     }
+    @keyframes blink {
+        0%, 60%, 100% {
+            opacity: 0.4;
+            transform: initial;
+        }
+        30% {
+            opacity: 1;
+            transform: translateY(-15px) scale(1.8);
+        }
+    }
     @keyframes fadeIn {
         0% {opacity: 0;}
         100% {opacity: 1;}
+    }
+    @keyframes grow-progress {
+        from { transform: scaleX(0); }
+        to { transform: scaleX(1); }
     }
     @keyframes translateTop {
         0%,
@@ -214,5 +248,12 @@
         100% {transform: translateY(0);}
         25% {transform: translateY(-.5rem);}
         75% {transform: translateY(.5rem);}
+    }
+    @keyframes animate-in {
+        from {
+            opacity: 0.2;
+            scale: 0.8;
+            translate: 0 10%;
+        }
     }
 }

@@ -27,9 +27,7 @@
         text-decoration-skip-ink: auto;
         cursor: pointer;
     }
-    a, button {
-        cursor: revert;
-    }
+    a, button {cursor: revert;}
     img, picture {
         width: 100%;
         height: 100%;

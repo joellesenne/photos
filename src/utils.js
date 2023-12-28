@@ -15,7 +15,7 @@ export function useHandleItem(id) {
 export function useGetYear() {
     const currentYear = new Date().getFullYear();
     if (currentYear > 2022) {
-        return `2022-${  currentYear}`;
+        return `2022-${currentYear}`;
     }
         return String(currentYear);
 

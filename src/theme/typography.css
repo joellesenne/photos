@@ -1,10 +1,7 @@
 @layer typography {
     :root {--font-size-heading: calc(1em + 1vw);}
-
     h1 {font-size: calc(var(--font-size-heading) + .5vw);}
-
     h2 {font-size: calc(var(--font-size-heading) + .2vw);}
-
     a {
         color: var(--bg-link-btn);
         text-shadow: -2px 2px 0 var(--color-shadow-dark);
@@ -13,7 +10,6 @@
         text-decoration-thickness: 0.2rem;
         text-decoration-style: wavy;
         text-decoration-skip-ink: none;
-
         transition: var(--transition-all);
         &:hover {
             color: var(--bg-link-btn-hover);

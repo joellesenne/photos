@@ -18,99 +18,104 @@ import ScrollToTop from "./components/ScrollToTop";
 import ThemeSwitch from "./components/ThemeSwitch";
 import TravelCategory from "./pages/TravelCategory";
 import WildlifeCategory from "./pages/WildlifeCategory";
+import Progress from "./components/Progress";
+import Loading from "./components/Loading";
 
 export default  function App() {
     const [tab, setTab] = useState('all');
+    const tabData = [
+        {
+            name: "All",
+            value: "all",
+            tab: <AllCategory/>
+        },
+        {
+            name: "Travel",
+            value: "travel",
+            tab: <TravelCategory/>
+        },
+        {
+            name: "City",
+            value: "city",
+            tab: <CityCategory/>
+        },
+        {
+            name: "Landscape",
+            value: "landscape",
+            tab: <LandscapeCategory/>
+        },
+        {
+            name: "Street Art",
+            value: "street-art",
+            tab: <StreetArtCategory/>
+        },
+        {
+            name: "Panorama",
+            value: "panorama",
+            tab: <PanoramaCategory/>
+        },
+        {
+            name: "Portrait",
+            value: "portrait",
+            tab: <PortraitCategory/>
+        },
+        {
+            name: "Exhibition",
+            value: "exhibition",
+            tab: <ExhibitionCategory/>
+        },
+        {
+            name: "Wildlife",
+            value: "wildlife",
+            tab: <WildlifeCategory/>
+        }
+    ]
     return (
         <>
-            <ThemeSwitch />
+            <Progress/>
+            <ThemeSwitch/>
             <ScrollToTop title="&#10595;"/>
             <Layout>
                 <Header>
-                    <Greeting />
+                    <Greeting/>
                     <Navigation>
                         <p>Select category :</p>
-                        <Suspense fallback={<h2>🌀 Loading...</h2>}>
-                            <Button
-                                isActive={tab === 'all'}
-                                onClick={() => setTab('all')}
-                            >
-                                All
-                            </Button>
-                            <Button
-                                isActive={tab === 'travel'}
-                                onClick={() => setTab('travel')}
-                            >
-                                Travel
-                            </Button>
-                            <Button
-                                isActive={tab === 'city'}
-                                onClick={() => setTab('city')}
-                            >
-                                City
-                            </Button>
-                            <Button
-                                isActive={tab === 'exhibition'}
-                                onClick={() => setTab('exhibition')}
-                            >
-                                Exhibition
-                            </Button>
-                            <Button
-                                isActive={tab === 'landscape'}
-                                onClick={() => setTab('landscape')}
-                            >
-                                Landscape
-                            </Button>
-                            <Button
-                                isActive={tab === 'panorama'}
-                                onClick={() => setTab('panorama')}
-                            >
-                                Panorama
-                            </Button>
-                            <Button
-                                isActive={tab === 'portrait'}
-                                onClick={() => setTab('portrait')}
-                            >
-                                Portrait
-                            </Button>
-                            <Button
-                                isActive={tab === 'street-art'}
-                                onClick={() => setTab('street-art')}
-                            >
-                                Street Art
-                            </Button>
-                            <Button
-                                isActive={tab === 'wildlife'}
-                                onClick={() => setTab('wildlife')}
-                            >
-                                Wildlife
-                            </Button>
+                        <Suspense fallback={Loading}>
+                            {tabData && tabData
+                                .map((items, index) =>(
+                                    <span key={index}>
+                                        <Button
+                                            isActive={tab === items.value}
+                                            onClick={() => setTab(items.value)}
+                                        >
+                                        {items.name}
+                                    </Button>
+                                </span>
+                            ))}
                         </Suspense>
                     </Navigation>
                 </Header>
                 <Content>
-                    {tab === 'all' && <AllCategory />}
-                    {tab === 'city' && <CityCategory />}
-                    {tab === 'travel' && <TravelCategory />}
-                    {tab === 'exhibition' && <ExhibitionCategory />}
-                    {tab === 'landscape' && <LandscapeCategory />}
-                    {tab === 'panorama' && <PanoramaCategory />}
-                    {tab === 'portrait' && <PortraitCategory />}
-                    {tab === 'street-art' && <StreetArtCategory />}
-                    {tab === 'wildlife' && <WildlifeCategory />}
+                    {tabData && tabData
+                        .map((items, index) => (
+                            <article key={index}>
+                                {tab === items.value && items.tab}
+                            </article>
+                        ))
+                    }
                 </Content>
-                <Footer />
+                <Footer/>
             </Layout>
             <CookieConsent
                 location="bottom"
                 buttonText="Sure man!!"
                 cookieName="myAwesomeCookieName2"
-                style={{ background: "#2B373B" }}
-                buttonStyle={{ color: "#4e503b", textShadow: "none" }}
+                style={{color: "var(--bg-color)",textShadow: "none",background: "var(--text-color)"}}
+                buttonStyle={{color: "var(--bg-link-btn-hover)",textShadow: "none" , background: "var(--bg-link-btn)", border: "solid 3px var(--bg-link-btn-hover)", borderRadius: "0.25em"}}
                 expires={150}
             >
                 This website uses cookies to enhance the user experience.
             </CookieConsent>
         </>
-  );
+    );
 }

@@ -1,4 +1,4 @@
-import React, { useState, useCallback, memo } from "react";
+import { useState, useCallback, memo } from "react";
 
 const sortMethods = {
     ascending: { method: (a, b) => a.id - b.id },
