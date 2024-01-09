@@ -23,6 +23,7 @@ const Figure = memo(({ item, isShown, isItemId, handleClick }) => (
                     : `https://photos.joellesenne.dev/assets/images${item.src}`
             }
             alt={item.alt}
+            draggable="false"
         />
         <figcaption className="flex justify-center overlay">
       <span>

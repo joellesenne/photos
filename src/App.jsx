@@ -1,10 +1,10 @@
-import { Suspense, useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import CookieConsent from "react-cookie-consent";
 import Layout from "./components/Layout";
 import Header from "./components/header";
 import Navigation from "./components/Navigation";
 import Greeting from "./components/Greeting";
-import Button from "./components/Button";
+// import Button from "./components/Button";
 import Content from "./components/content";
 import AllCategory from "./pages/AllCategory";
 import CityCategory from "./pages/CityCategory";
@@ -20,6 +20,8 @@ import TravelCategory from "./pages/TravelCategory";
 import WildlifeCategory from "./pages/WildlifeCategory";
 import Progress from "./components/Progress";
 import Loading from "./components/Loading";
+
+const Button = lazy(() => import('./components/Button'));
 
 export default  function App() {
     const [tab, setTab] = useState('all');
@@ -80,10 +82,11 @@ export default  function App() {
                     <Greeting/>
                     <Navigation>
                         <p>Select category :</p>
-                        <Suspense fallback={Loading}>
-                            {tabData && tabData
-                                .map((items, index) =>(
-                                    <span key={index}>
+                        <div className="flex items-center justify-center flex-wrap">
+                            <Suspense fallback={Loading}>
+                                {tabData && tabData
+                                    .map((items, index) =>(
+                                        <span key={index}>
                                         <Button
                                             isActive={tab === items.value}
                                             onClick={() => setTab(items.value)}
@@ -91,8 +94,9 @@ export default  function App() {
                                         {items.name}
                                     </Button>
                                 </span>
-                            ))}
-                        </Suspense>
+                                    ))}
+                            </Suspense>
+                        </div>
                     </Navigation>
                 </Header>
                 <Content>

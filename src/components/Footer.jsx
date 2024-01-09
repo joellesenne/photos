@@ -11,7 +11,7 @@ export default function Footer() {
                     target="_blank"
                 >
                     Joël Lesenne
-                </a>{" - "}
+                </a>{" | "}
                 This project is{" "}
                 <a
                     href="https://github.com/joellesenne/photos"
