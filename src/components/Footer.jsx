@@ -4,7 +4,8 @@ export default function Footer() {
     return (
         <footer className="footer">
             <p>
-                © {useGetYear()}{" "}
+                © {useGetYear()}{" | "}
+                All rights reserved{" | "}
                 <a
                     href="https://joellesenne.dev"
                     rel="noopener noreferrer"
