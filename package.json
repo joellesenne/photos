@@ -1,24 +1,24 @@
 {
   "name": "photos",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "private": true,
   "bugs": {
-    "url": "https://github.com/joellesenne/photos.joellesenne.dev/issues"
+    "url": "https://github.com/joellesenne/photos/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joellesenne/photos.joellesenne.dev.git"
+    "url": "git+https://github.com/joellesenne/photos.git"
   },
   "license": "MIT",
   "author": "Joel Lesenne <contact@joellesenne.dev>",
   "scripts": {
     "build": "env-cmd -f .env.production react-scripts build",
     "eject": "react-scripts eject",
+    "format": "prettier - write src/**/*.{js,jsx,} - config .prettierrc.json",
     "lint": "eslint src/**/*.{js,jsx}",
     "lint:fix": "eslint - fix src/**/*.{js,jsx,}",
-    "format": "prettier - write src/**/*.{js,jsx,} - config .prettierrc.json",
-    "start": "env-cmd -f .env.development react-scripts start",
     "serve": "serve -s build -p 3080",
+    "start": "env-cmd -f .env.development react-scripts start",
     "test": "react-scripts test"
   },
   "browserslist": {
