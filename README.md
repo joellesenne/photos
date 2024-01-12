@@ -62,17 +62,26 @@ pnpm install
 
 ## Note
 
-Create file  `.env.development` add `REACT_APP_API_URL=https://api.example.com/file.json` learn more [Adding custom environment variables](https://create-react-app.dev/docs/adding-custom-environment-variables/)
+Create file  `.env.development && .env.production` add `REACT_APP_API_URL=https://api.example.com/file.json` learn more [Adding custom environment variables](https://create-react-app.dev/docs/adding-custom-environment-variables/)
 
 ## Usage
 
 ```sh
 # Run with react.js
-npm start dev
+npm start
 
 # Or
 env-cmd -f .env.development react-scripts start
 ```
+
+=> browse to [http://localhost:3000/](http://localhost:3000/)
+
+🎉 have fun
+
+## Built With
+
+- [React](https://react.dev/) - Library used
+
 
 ## Author
 
