@@ -1,18 +1,4 @@
-import { useState } from "react";
-
-export function useHandleShown() {
-    const [isShown, setIsShown] = useState(false);
-    setIsShown((current) => !current);
-    return isShown
-}
-export function useHandleItem(id) {
-    const [isItemId, setIsItemId] = useState(null);
-
-    setIsItemId(id);
-
-    return isItemId
-}
-export function useGetYear() {
+export function currentGetYear() {
     const currentYear = new Date().getFullYear();
     if (currentYear > 2022) {
         return `2022-${currentYear}`;
@@ -21,7 +7,12 @@ export function useGetYear() {
 
 }
 
-export function useScrollToTop() {
+export const sortMethods = {
+    ascending: (a, b) => a.id - b.id,
+    descending: (a, b) => b.id - a.id,
+};
+
+export function scrollToTop() {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'

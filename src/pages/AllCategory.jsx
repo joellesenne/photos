@@ -1,4 +1,4 @@
-import UseDataFetch from "../hooks/UseDataFetch";
+import UseDataFetch from "../hooks/useDataFetch.jsx";
 import AllGallery from "../components/AllGallery";
 
 export default function AllCategory() {

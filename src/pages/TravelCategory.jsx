@@ -1,5 +1,5 @@
-import UseDataFetch from "../hooks/UseDataFetch";
-import CategoryGallery from "../components/CategoryGallery";
+import UseDataFetch from "../hooks/useDataFetch.jsx";
+import CategoryGallery from "../components/CategoryGallery.jsx";
 
 export  default function TravelCategory() {
     const { data, loading, error } = UseDataFetch();

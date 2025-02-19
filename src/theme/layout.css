@@ -1,11 +1,17 @@
 @layer layout {
+    :root {
+        --n: 4;
+        --gap: var(--n)rem;
+        --padding: var(--n)rem;
+    }
+
     .container {
         display: flex;
         flex-direction: column;
-        column-gap: 4rem;
+        gap: var(--gap);
         flex-wrap: wrap;
-        padding-block: 4rem;
-        padding-inline: 4rem;
+        padding-block: var(--padding);
+        padding-inline: var(--padding);
         container-type: inline-size;
         @media (width >= 1024px) {
             flex-direction: row;

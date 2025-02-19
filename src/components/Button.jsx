@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useTransition } from 'react';
 
 export default function Button({ children, isActive, onClick }) {
@@ -31,3 +32,10 @@ export default function Button({ children, isActive, onClick }) {
         </button>
     );
 }
+
+Button.propTypes = {
+    name: PropTypes.string.isRequired,
+    children: PropTypes.node,
+    isActive: PropTypes.node,
+    onClick: PropTypes.node
+};

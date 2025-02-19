@@ -1,16 +1,36 @@
 @layer typography {
-    :root {--font-size-heading: calc(1em + 1vw);}
-    h1 {font-size: calc(var(--font-size-heading) + .5vw);}
-    h2 {font-size: calc(var(--font-size-heading) + .1vw);}
+    :root {
+        --font-size-heading: calc(1em + 1vw);
+        --heading-level-1: calc(var(--font-size-heading) + .5vw);
+        --heading-level-2: calc(var(--font-size-heading) + .1vw);
+        --link-btn-color: var(--bg-link-btn);
+        --link-btn-shadow: -.08ch .05ch .05ch var(--color-shadow-dark), -.05ch .03ch 0 var(--color-shadow-light);
+        --link-btn-decoration: underline;
+        --link-btn-decoration-color: var(--bg-link-btn-hover);
+        --link-btn-decoration-thickness: 0.2rem;
+        --link-btn-decoration-style: wavy;
+        --link-btn-decoration-skip-ink: none;
+        --transition-all: all 0.3s ease;
+    }
+
+    h1 {
+        font-size: var(--heading-level-1);
+    }
+
+    h2 {
+        font-size: var(--heading-level-2);
+    }
+
     a {
-        color: var(--bg-link-btn);
-        text-shadow: -.08ch .05ch .05ch var(--color-shadow-dark), -.05ch .03ch 0 var(--color-shadow-light);
-        text-decoration: underline;
-        text-decoration-color: var(--bg-link-btn-hover);
-        text-decoration-thickness: 0.2rem;
-        text-decoration-style: wavy;
-        text-decoration-skip-ink: none;
+        color: var(--link-btn-color);
+        text-shadow: var(--link-btn-shadow);
+        text-decoration: var(--link-btn-decoration);
+        text-decoration-color: var(--link-btn-decoration-color);
+        text-decoration-thickness: var(--link-btn-decoration-thickness);
+        text-decoration-style: var(--link-btn-decoration-style);
+        text-decoration-skip-ink: var(--link-btn-decoration-skip-ink);
         transition: var(--transition-all);
+
         &:hover {
             color: var(--bg-link-btn-hover);
             text-decoration-color: var(--bg-link-btn);

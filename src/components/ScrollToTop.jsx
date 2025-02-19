@@ -1,15 +1,15 @@
-import { useScrollToTop } from "../utils";
-import { UseScrollToTop } from "../hooks/UseScrollToTop";
+import PropTypes from 'prop-types';
+import { scrollToTop } from "../utils";
+import { useScrollToTop } from "../hooks/useScrollToTop.jsx";
 
 export default function ScrollToTop({title}) {
-    const {isVisible} = UseScrollToTop();
+    const {isVisible} = useScrollToTop();
     return (
-        // eslint-disable-next-line react/jsx-no-useless-fragment
         <>
             {isVisible && (
                 <button
                     className="scroll"
-                    onClick={useScrollToTop}
+                    onClick={scrollToTop}
                     type="button"
                 >
                     {title}
@@ -18,3 +18,8 @@ export default function ScrollToTop({title}) {
         </>
     );
 }
+
+ScrollToTop.propTypes = {
+    name: PropTypes.string.isRequired,
+    title: PropTypes.node
+};

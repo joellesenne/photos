@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const UseScrollToTop = () => {
+export const useScrollToTop = () => {
     const [isVisible, setVisible] = useState(false);
     const toggleVisible = (event) => {
         const scrolled = document.documentElement.scrollTop;
@@ -11,6 +11,7 @@ export const UseScrollToTop = () => {
             setVisible(false);
         }
     };
+
     useEffect(() => {
         window.addEventListener('scroll', toggleVisible);
         return () => {

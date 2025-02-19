@@ -2,8 +2,8 @@
     :root {
         --font-size-btn: calc(13px + 1vmin);
         --border-radius: 1rem;
-        --custom-easing: linear(
-                0, 0.03, 0.14 4%, 0.94 17%, 1.08, 1.15, 1.16, 1.15 30%, 1.02 43%, 0.99,
+        --custom-easing: cubic-bezier(
+                0, 0.03, 0.14 4%, 0.94 17%, 1.08, 1.15, 1.15 30%, 1.02 43%, 0.99,
                 0.98 51%, 0.97 57%, 1 77%, 1
         );
         --grow-progress-animation: grow-progress auto linear;
@@ -11,10 +11,10 @@
         --animation-in: animate-in ease-in both;
         --animation-in-timeline: view();
         --animation-in-range: entry 25% cover calc(50% - 10vh);
-
         --transition: 35ms;
         --transition-all: all 0.2s 0.1s ease-in-out;
     }
+
     .progress {
         @supports not (animation-timeline: scroll()) {
             display: none;
@@ -29,6 +29,7 @@
         &.progress-animation {animation: var(--grow-progress-animation);}
         &.progress-animation-timeline {animation-timeline: var(--grow-progress-animation-timeline);}
     }
+
     .theme-switch {
         position: fixed;
         top: 0;
@@ -44,6 +45,7 @@
             }
         }
     }
+
     .brand {
         height: 7.5vw;
         transform: translateY(-2rem);
@@ -85,6 +87,7 @@
             }
         }
     }
+
     .nav {
         position: sticky;
         top: 0;
@@ -96,6 +99,7 @@
             background-color: var(--bg-link-btn);
             border: solid 3px var(--bg-link-btn-hover);
             border-radius: 0.25em;
+            /* border-radius: calc(infinity * 1px); */
             cursor: pointer;
             transition: var(--transition-all);
             &:hover,
@@ -117,6 +121,7 @@
             }
         }
     }
+
     .select {
         display: grid;
         grid-template-areas: "select";
@@ -149,29 +154,33 @@
         &:hover {box-shadow: 2px 2px 0 var(--color-shadow-light), 3px 4px 0 var(--color-shadow-dark);
         }
     }
-    .scroll {
-        position: fixed;
-        min-width: auto;
-        top: 70%;
-        padding: 18px 8px;
-        right: -8px;
-        font-size: 25px;
-        color: var(--color-link-btn);
-        text-shadow: none;
-        line-height: .6;
-        background-color: var(--bg-link-btn);
-        box-shadow: 2px 1px 0 var(--color-shadow-light), 3px 2px 0 var(--color-shadow-dark);
-        cursor: pointer;
-        z-index: 9999;
-        &:hover {
-            color: var(--bg-link-btn);
-            background-color: var(--bg-link-btn-hover);
-            box-shadow: var(--color-shadow-hover);
-        }
-        @media (width >= 768px) {
-            animation: .65s var(--custom-easing) var(--transition) infinite both translateTop;
+
+    @media (update: fast) {
+        .scroll {
+            position: fixed;
+            min-width: auto;
+            top: 70%;
+            padding: 18px 8px;
+            right: -8px;
+            font-size: 25px;
+            color: var(--color-link-btn);
+            text-shadow: none;
+            line-height: .6;
+            background-color: var(--bg-link-btn);
+            box-shadow: 2px 1px 0 var(--color-shadow-light), 3px 2px 0 var(--color-shadow-dark);
+            cursor: pointer;
+            z-index: 9999;
+            &:is(:hover, :focus, :active) {
+                color: var(--bg-link-btn);
+                background-color: var(--bg-link-btn-hover);
+                box-shadow: var(--color-shadow-hover);
+            }
+            @media (width >= 768px) {
+                animation: .65s var(--custom-easing) var(--transition) infinite both translateTop;
+            }
         }
     }
+
     .loading span {
         animation-name: blink;
         animation-duration: 1.4s;
@@ -180,6 +189,7 @@
         &:nth-child(2) {animation-delay: 0.2s;}
         &:nth-child(3) {animation-delay: 0.4s;}
     }
+
     .gallery {
         margin-block: 10px;
         height: auto;
@@ -285,9 +295,10 @@
             &:hover .overlay {opacity: 1;}
         }
         &:has(figure:hover) figure:not(:hover) {
-            & img {filter: brightness(0.65);}
+            & img {filter: brightness(0.65) saturate(1.25);}
         }
     }
+
     @keyframes blink {
         0%, 60%, 100% {
             opacity: 0.4;
@@ -298,14 +309,17 @@
             transform: translateY(-15px) scale(1.8);
         }
     }
+
     @keyframes fadeIn {
         0% {opacity: 0;}
         100% {opacity: 1;}
     }
+
     @keyframes grow-progress {
         from {transform: scaleX(0);}
         to {transform: scaleX(1);}
     }
+
     @keyframes translateTop {
         0%,
         50%,
@@ -313,6 +327,7 @@
         25% {transform: translateY(-.5rem);}
         75% {transform: translateY(.5rem);}
     }
+
     @keyframes animate-in {
         from {
             opacity: 0.2;

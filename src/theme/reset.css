@@ -1,34 +1,69 @@
 @layer reset {
-    *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    :root {
+        --initial-display: initial;
+        --inherit-font: inherit;
+        --pointer-cursor: pointer;
+        --none-outline: none;
+        --visible-overflow: visible;
+        --transparent-bg: transparent;
+        --no-appearance: none;
+        --no-appearance-webkit: -webkit-none;
+        --no-appearance-moz: -moz-none;
+    }
+
+    * {
         all: unset;
         display: revert;
     }
-    *, *::before, *::after {
-        box-sizing: inherit;
-    }
-    html {
+
+    /* Box Sizing */
+    :is(*) {
         box-sizing: border-box;
+    }
+
+    /* Text Rendering and Size Adjustment */
+    :is(h1, h2, h3, h4, p, button, input, label, figure, blockquote, dl, dd) {
         text-rendering: optimizeLegibility;
         -moz-text-size-adjust: none;
         -webkit-text-size-adjust: none;
         text-size-adjust: none;
+    }
+    html {
         scroll-behavior: initial;
-        &:focus-within {scroll-behavior: smooth;}
+        @media (prefers-reduced-motion: reduce) {
+            scroll-behavior: auto;
+        }
+        &:focus-within {
+            scroll-behavior: smooth;
+        }
     }
-    body, h1, h2, h3, h4, p,
-    figure, blockquote, dl, dd {margin-block-end: 0;}
-    ul[role='list'],
-    ol[role='list'] {list-style: none;}
-    h1, h2, h3, h4,
-    button, input, label {line-height: 1.1;}
-    h1, h2,
-    h3, h4 {text-wrap: balance;}
-    a:not([class]) {
+
+    /* Margins */
+    :is(body, h1, h2, h3, h4, p, figure, blockquote, dl, dd) {
+        margin-block-end: 0;
+    }
+
+    /* List Styles */
+    :is(ul[role='list'], ol[role='list']) {
+        list-style: none;
+    }
+
+    /* Line Height and Text Wrap */
+    :is(h1, h2, h3, h4, button, input, label) {
+        line-height: 1.1;
+    }
+    :is(h1, h2, h3, h4) {
+        text-wrap: balance;
+    }
+
+    /* Links */
+    :is(a:not([class])) {
         text-decoration-skip-ink: auto;
-        cursor: pointer;
+        cursor: var(--pointer-cursor);
     }
-    a, button {cursor: revert;}
-    img, picture {
+
+    /* Images */
+    :is(img, picture) {
         width: 100%;
         height: 100%;
         max-width: 100%;
@@ -38,34 +73,65 @@
         max-inline-size: 100%;
         max-block-size: 100%;
     }
-    img[width] {width: auto;}
-    img[width][height] {height: auto;}
-    input, button,
-    textarea, select {font: inherit;}
-    input {opacity: 0;}
-    button, select {
-        line-height: 1.15;
-        outline: none;
-        overflow: visible;
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
+    :is(img[width]) {
+        width: auto;
     }
-    textarea:not([rows]) {min-height: 10em;}
+    :is(img[width][height]) {
+        height: auto;
+    }
+
+    /* Form Elements */
+    :is(input, button, textarea, select) {
+        font: var(--inherit-font);
+    }
+    input {
+        opacity: 0;
+    }
+    :is(button, select) {
+        line-height: 1.15;
+        outline: var(--none-outline);
+        overflow: var(--visible-overflow);
+        appearance: var(--no-appearance);
+        -webkit-appearance: var(--no-appearance-webkit);
+        -moz-appearance: var(--no-appearance-moz);
+    }
+    textarea:not([rows]) {
+        min-height: 10em;
+    }
     select {
-        background-color: transparent;
+        background-color: var(--transparent-bg);
         border: none;
         padding: 0 1em 0 0;
         margin: 0;
         width: 100%;
-        font-family: inherit;
-        font-size: inherit;
-        cursor: inherit;
-        line-height: inherit;
-        &::-ms-expand {display: none;}
+        &::-ms-expand {
+            display: none;
+        }
     }
-    :target {scroll-margin-block: 5ex;}
-    code {font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;}
+
+    /* Target Scroll Margin */
+    :target {
+        scroll-margin-block: 5ex;
+    }
+
+    /* Code Font */
+    code {
+        font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    }
+
+    /* Additional Utility Styles */
+    :is(h1, h2, h3, h4) {
+        margin-block-end: .5em;
+    }
+
+    :is(ol, ul) {
+        padding-inline-start: 1em;
+    }
+
+    :is(button, input[type='button'], input[type='reset'], input[type='submit']) {
+        cursor: var(--pointer-cursor);
+    }
+
     @media (prefers-reduced-motion: reduce) {
         *,
         *::before,

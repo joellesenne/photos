@@ -1,7 +1,7 @@
-import { UseThemeSwitch } from "../hooks/UseThemeSwitch"
+import { useThemeSwitch } from "../hooks/useThemeSwitch.jsx"
 
 export default function ThemeSwitch() {
-    const {theme, toggleDark} = UseThemeSwitch()
+    const {theme, toggleDark} = useThemeSwitch()
 
     return (
         <label

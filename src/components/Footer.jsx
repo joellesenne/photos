@@ -1,10 +1,10 @@
-import { useGetYear } from "../utils";
+import { currentGetYear } from "../utils";
 
 export default function Footer() {
     return (
         <footer className="footer">
             <p>
-                © {useGetYear()}{" | "}
+                © {currentGetYear()}{" | "}
                 All rights reserved{" | "}
                 <a
                     href="https://joellesenne.dev"
